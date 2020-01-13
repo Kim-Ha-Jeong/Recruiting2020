@@ -1,8 +1,21 @@
+//const mysql = require('mysql');
 const express = require('express');
 const cors = require('cors');
-const mysql = require('mysql');
-
 const app = express();
+
+/* 몽고 디비 연결 */
+const mongoose = require('mongoose');
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function(){
+    console.log("Connected to mongod server");
+});
+
+//connect메소드로 서버 접속!
+mongoose.connect('mongodb://localhost/recruit');
+
+/*
+mysql 코드
 
 const selectAll = 'SELECT * FROM test';
 
@@ -18,7 +31,7 @@ connection.connect(err => {
         return err;
     }
 });
-
+*/
 app.use(cors());
 
 app.get('/', (req,res) => {
