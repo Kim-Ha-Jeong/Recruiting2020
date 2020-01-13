@@ -8,11 +8,35 @@ const mongoose = require('mongoose');
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function(){
-    console.log("Connected to mongod server");
+    console.log("Connected to mongodb server");
 });
 
 //connect메소드로 서버 접속!
-mongoose.connect('mongodb://localhost/recruit');
+mongoose.connect('mongodb://localhost:27017/recruit');
+
+//스키마에 자료형을 정의(레퍼런스 설정)
+var test = mongoose.Schema({
+    title: String,
+    contents: String
+});
+
+//모델을 정의(객체를 찍어내는 틀)
+var testModel = mongoose.model("testModel", test);
+//test를 통해 testModel만들기
+
+//모델로 인스턴스 만들기
+var testIns = new testModel({title: "제목입니다", contents: "내용입니다"});
+
+testIns.save(function(err, testIns){
+	if(err) return console.error(err);
+});
+
+testModel.find(function(err, models){
+	if(err) return console.error(err);
+	console.log("find() - "+models);
+});
+
+testModel.find({name:/^testIns/});
 
 /*
 mysql 코드
