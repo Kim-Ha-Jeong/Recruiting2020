@@ -10,8 +10,7 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem,
-  NavbarText
+  DropdownItem
 } from 'reactstrap';
 
 const Navb = (props) => {
@@ -26,32 +25,41 @@ const Navb = (props) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-          <UncontrolledDropdown nav inNavbar>
+            <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 소개
               </DropdownToggle>
               <DropdownMenu>
                 <DropdownItem>
-                    <NavLink href="/about/ewhaian">
-                  이화이언 소개
+                  <NavLink href="/about/ewhaian">
+                    이화이언 소개
                   </NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                  팀 소개
+                  <NavLink href="/about/team">
+                    팀 소개
+                  </NavLink>
                 </DropdownItem>
                 <DropdownItem>
-                  OB 소감
+                  <NavLink href="/about/OB">
+                    OB 소감
+                  </NavLink>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="/notice">공지사항</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+              <NavLink href="/submit">지원서 제출</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/FAQ">FAQ</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/result">결과 확인</NavLink>
             </NavItem>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
         </Collapse>
       </Navbar>
     </div>
