@@ -1,20 +1,19 @@
 const mongoose = require('mongoose');
-// Require result model in our routes module
 const Schema = mongoose.Schema;
 
 // Define collection and schema for Business
-let Result = new Schema({
-  name: {
+let Notice = new Schema({
+  num: {
     type: String
   },
-  student_id: {
+  title: {
     type: String
   },
-  pass: {
+  desc: {
     type: String
   }
 },{
-    collection: 'result'
+    collection: 'notice'
 });
 
-module.exports = mongoose.model('result', Result);
+module.exports = mongoose.model('recruiting2020',Notice);

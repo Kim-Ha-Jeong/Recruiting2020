@@ -1,48 +1,77 @@
+
 import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import axios from 'axios';
 
-import Create from './Create';
-import Edit from './Edit';
-import Index from './Index';
-import Find from './Find';
-import Pass from './Pass';
-import UnPass from './UnPass';
+export default class Find extends Component {
+  constructor(props) {
+    super(props);
+    
+    this.onChangeName = this.onChangeName.bind(this);
+    this.onChangeStudent_id = this.onChangeStudent_id.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
 
-class Result extends Component {
-    render() {
-        return (
-            <Router>
-                <div className="container">
-                    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                        <Link to={'/'} className="navbar-brand">React CRUD Example</Link>
-                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul className="navbar-nav mr-auto">
-                                <li className="nav-item">
-                                    <Link to={'/'} className="nav-link">Home</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link to={'/create'} className="nav-link">Create</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link to={'/index'} className="nav-link">Index</Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav> <br />
-                    <h2>Welcome to React CRUD Tutorial</h2> <br />
-                    <Switch>
-                        <Route exact path='/create' component={Create} />
-                        <Route path='/edit/:id' component={Edit} />
-                        <Route path='/index' component={Index} />
-                        <Route path="/find" component={Find} />
-                        <Route path="/pass" component={Pass} />
-                        <Route path="/unpass" component={UnPass} />
-                    </Switch>
-                </div>
-            </Router>
-        );
+    this.state = {
+      result:'',
+      name: '',
+      student_id: ''
     }
-}
+  }
 
-export default Result;
+  onChangeName(e) {
+    this.setState({
+      name: e.target.value
+    });
+  }
+  onChangeStudent_id(e) {
+    this.setState({
+      student_id: e.target.value
+    })  
+  }
+  
+  onSubmit(e) {
+    e.preventDefault();
+    axios.post('http://localhost:4000/result/find/'+this.state.student_id+"/"+this.state.name)
+        .then((res) => this.setState({
+          result: res.data
+        }))
+        .then(res => this.pass());
+  }
+
+  pass(){
+    if(this.state.result === "합격"){
+      this.props.history.push('/result/pass');
+    } else if(this.state.result === "불합격"){
+      this.props.history.push('/result/unpass');
+    }
+  }
+
+  render() {
+    return (
+        <div className="container-fluid" style={{ marginTop: 10 }}>
+            <h3 align="center">결과 확인</h3>
+            <form onSubmit={this.onSubmit}>
+                <div className="form-group">
+                    <label>이름</label>
+                    <input 
+                      type="text" 
+                      className="form-control"
+                      onChange={this.onChangeName}
+                      />
+                </div>
+                <div className="form-group">
+                    <label>학번</label>
+                    <input type="text" 
+                      className="form-control"
+                      onChange={this.onChangeStudent_id}
+                      />
+                </div>
+                <div className="form-group">
+                    <input type="submit" 
+                      value="결과 확인하기" 
+                      className="btn btn-primary"/>
+                </div>
+            </form>
+        </div>
+    )
+  }
+}

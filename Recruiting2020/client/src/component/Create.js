@@ -4,48 +4,50 @@ import axios from 'axios';
 export default class Create extends Component {
   constructor(props) {
     super(props);
-    this.onChangeName = this.onChangeName.bind(this);
-    this.onChangeStudent_id = this.onChangeStudent_id.bind(this);
-    this.onChangePass = this.onChangePass.bind(this);
+    this.onChangeNum = this.onChangeNum.bind(this);
+    this.onChangeTitle = this.onChangeTitle.bind(this);
+    this.onChangeDesc = this.onChangeDesc.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      name: '',
-      student_id: '',
-      pass:''
+      num: '',
+      title: '',
+      desc:''
     }
   }
-  onChangeName(e) {
+  onChangeNum(e) {
     this.setState({
-      name: e.target.value
+      num: e.target.value
     });
   }
-  onChangeStudent_id(e) {
+  onChangeTitle(e) {
     this.setState({
-      student_id: e.target.value
+      title: e.target.value
     })  
   }
-  onChangePass(e) {
+  onChangeDesc(e) {
     this.setState({
-      pass: e.target.value
+      desc: e.target.value
     })
   }
 
   onSubmit(e) {
     e.preventDefault();
     const obj = {
-      name: this.state.name,
-      student_id: this.state.student_id,
-      pass: this.state.pass
+      num: this.state.num,
+      title: this.state.title,
+      desc: this.state.desc
     };
-    axios.post('http://localhost:4000/result/add', obj)
+    axios.post('http://localhost:4000/notice/add', obj)
         .then(res => console.log(res.data));
     
     this.setState({
-      name: '',
-      student_id: '',
-      pass: ''
+      num: '',
+      title: '',
+      desc: ''
     })
+
+    this.props.history.push('/noticeManager');
   }
  
   render() {
@@ -58,24 +60,24 @@ export default class Create extends Component {
                     <input 
                       type="text" 
                       className="form-control" 
-                      value={this.state.name}
-                      onChange={this.onChangeName}
+                      value={this.state.num}
+                      onChange={this.onChangeNum}
                       />
                 </div>
                 <div className="form-group">
                     <label>Student Id: </label>
                     <input type="text" 
                       className="form-control"
-                      value={this.state.student_id}
-                      onChange={this.onChangeStudent_id}
+                      value={this.state.title}
+                      onChange={this.onChangeTitle}
                       />
                 </div>
                 <div className="form-group">
-                    <label>Pass: </label>
+                    <label>desc: </label>
                     <input type="text" 
                       className="form-control"
-                      value={this.state.pass}
-                      onChange={this.onChangePass}
+                      value={this.state.desc}
+                      onChange={this.onChangeDesc}
                       />
                 </div>
                 <div className="form-group">

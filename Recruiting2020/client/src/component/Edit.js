@@ -5,58 +5,58 @@ import axios from 'axios';
 export default class Edit extends Component {
   constructor(props) {
     super(props);
-    this.onChangeName = this.onChangeName.bind(this);
-    this.onChangeStudent_id = this.onChangeStudent_id.bind(this);
-    this.onChangePass = this.onChangePass.bind(this);
+    this.onChangeNum = this.onChangeNum.bind(this);
+    this.onChangeTitle = this.onChangeTitle.bind(this);
+    this.onChangeDesc = this.onChangeDesc.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      name: '',
-      student_id: '',
-      pass:''
+      num: '',
+      title: '',
+      desc:''
     }
   }
 
   componentDidMount() {
-      axios.get('http://localhost:4000/result/edit/'+this.props.match.params.id)
+      axios.get('http://localhost:4000/notice/edit/'+this.props.match.params.id)
           .then(response => {
               this.setState({ 
-                name: response.data.name, 
-                student_id: response.data.student_id,
-                pass: response.data.pass });
+                num: response.data.num, 
+                title: response.data.title,
+                desc: response.data.desc });
           })
           .catch(function (error) {
               console.log(error);
           })
     }
 
-  onChangeName(e) {
+  onChangeNum(e) {
     this.setState({
-      name: e.target.value
+      num: e.target.value
     });
   }
-  onChangeStudent_id(e) {
+  onChangeTitle(e) {
     this.setState({
-      student_id: e.target.value
+      title: e.target.value
     })  
   }
-  onChangePass(e) {
+  onChangeDesc(e) {
     this.setState({
-      pass: e.target.value
+      desc: e.target.value
     })
   }
 
   onSubmit(e) {
     e.preventDefault();
     const obj = {
-      name: this.state.name,
-      student_id: this.state.student_id,
-      pass: this.state.pass
+      num: this.state.num,
+      title: this.state.title,
+      desc: this.state.desc
     };
-    axios.post('http://localhost:4000/result/update/'+this.props.match.params.id, obj)
+    axios.post('http://localhost:4000/notice/update/'+this.props.match.params.id, obj)
         .then(res => console.log(res.data));
     
-    this.props.history.push('/index');
+    this.props.history.push('/noticeManager');
   }
  
   render() {
@@ -69,24 +69,24 @@ export default class Edit extends Component {
                     <input 
                       type="text" 
                       className="form-control" 
-                      value={this.state.name}
-                      onChange={this.onChangeName}
+                      value={this.state.num}
+                      onChange={this.onChangeNum}
                       />
                 </div>
                 <div className="form-group">
                     <label>Business Name: </label>
                     <input type="text" 
                       className="form-control"
-                      value={this.state.student_id}
-                      onChange={this.onChangeStudent_id}
+                      value={this.state.title}
+                      onChange={this.onChangeTitle}
                       />
                 </div>
                 <div className="form-group">
                     <label>GST Number: </label>
                     <input type="text" 
                       className="form-control"
-                      value={this.state.pass}
-                      onChange={this.onChangePass}
+                      value={this.state.desc}
+                      onChange={this.onChangeDesc}
                       />
                 </div>
                 <div className="form-group">

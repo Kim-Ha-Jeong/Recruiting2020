@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-class TableRow extends Component {
+class RowManager extends Component {
 
   constructor(props) {
         super(props);
         this.delete = this.delete.bind(this);
     }
     delete() {
-        axios.get('http://localhost:4000/result/delete/'+this.props.obj._id)
+        axios.get('http://localhost:4000/notice/delete/'+this.props.obj._id)
             .then(console.log('Deleted'))
             .catch(err => console.log(err))
     }
@@ -17,16 +17,16 @@ class TableRow extends Component {
     return (
         <tr>
           <td>
-            {this.props.obj.name}
+            {this.props.obj.num}
           </td>
           <td>
-            {this.props.obj.student_id}
+            {this.props.obj.title}
           </td>
           <td>
-            {this.props.obj.pass}
+            {this.props.obj.desc}
           </td>
           <td>
-            <Link to={"/edit/"+this.props.obj._id} className="btn btn-primary">Edit</Link>
+            <Link to={"/noticeManager/edit/"+this.props.obj._id} className="btn btn-primary">Edit</Link>
           </td>
           <td>
             <button onClick={this.delete} className="btn btn-danger">Delete</button>
@@ -39,4 +39,4 @@ class TableRow extends Component {
   }
 }
 
-export default TableRow;
+export default RowManager;

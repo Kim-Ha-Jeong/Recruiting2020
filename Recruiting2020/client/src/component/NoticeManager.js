@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Row from './Row';
+import { Link } from 'react-router-dom';
+import RowManager from './RowManager';
 
 export default class Index extends Component {
 
@@ -17,9 +18,10 @@ export default class Index extends Component {
           console.log(error);
         })
     }
+
     tabRow(){
       return this.state.result.map(function(object, i){
-          return <Row obj={object} key={i} />;
+          return <RowManager obj={object} key={i} />;
       });
     }
 
@@ -33,12 +35,14 @@ export default class Index extends Component {
                 <th>번호</th>
                 <th>제목</th>
                 <th>내용</th>
+                <th colSpan="2">Action</th>
               </tr>
             </thead>
             <tbody>
               { this.tabRow() }
             </tbody>
           </table>
+            <Link to="/noticeManager/create" className="btn btn-primary">Create</Link>
         </div>
       );
     }
