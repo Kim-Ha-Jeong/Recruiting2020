@@ -53,10 +53,10 @@ export default class Create extends Component {
   render() {
     return (
         <div style={{ marginTop: 10 }}>
-            <h3>Add New Business</h3>
+            <h3>공지사항</h3>
             <form onSubmit={this.onSubmit}>
                 <div className="form-group">
-                    <label>Name:  </label>
+                    <label>번호  </label>
                     <input 
                       type="text" 
                       className="form-control" 
@@ -65,7 +65,7 @@ export default class Create extends Component {
                       />
                 </div>
                 <div className="form-group">
-                    <label>Student Id: </label>
+                    <label>제목 </label>
                     <input type="text" 
                       className="form-control"
                       value={this.state.title}
@@ -73,7 +73,7 @@ export default class Create extends Component {
                       />
                 </div>
                 <div className="form-group">
-                    <label>desc: </label>
+                    <label>내용 </label>
                     <input type="text" 
                       className="form-control"
                       value={this.state.desc}

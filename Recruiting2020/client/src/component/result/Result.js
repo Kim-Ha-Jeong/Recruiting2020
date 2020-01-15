@@ -42,10 +42,13 @@ export default class Find extends Component {
       this.props.history.push('/result/pass');
     } else if(this.state.result === "불합격"){
       this.props.history.push('/result/unpass');
+    } else {
+        this.props.history.push('/result/undefine')
     }
   }
 
   render() {
+    
     return (
         <div className="container-fluid" style={{ marginTop: 10 }}>
             <h3 align="center">결과 확인</h3>
@@ -71,7 +74,8 @@ export default class Find extends Component {
                       className="btn btn-primary"/>
                 </div>
             </form>
-        </div>
+      </div>
+
     )
   }
 }
