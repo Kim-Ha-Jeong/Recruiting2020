@@ -15,13 +15,8 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-<<<<<<< HEAD:Recruiting2020/server/package.json
     "mongoose": "^5.8.7",
     "nodemon": "^2.0.2"
-=======
-    "mongodb": "^3.4.1",
-    "mongoose": "^5.8.7",
-    "mysql": "^2.17.1"
->>>>>>> 3ae0922e69367b28fad87cddbce4d90b71856a32:package.json
+
   }
 }
