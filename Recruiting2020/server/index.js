@@ -23,8 +23,8 @@ app.use('/notice', noticeRoute);
 app.use('/result', resultRoute);
 app.use('/upload', uploadRoute);
 
-app.use(express.static('public'));
-app.use('/upload',express.static('upload'));
+app.use('/download',express.static('download'));
+app.use('/upload',express.static('uploads'));
 
 app.use(cors());
 
