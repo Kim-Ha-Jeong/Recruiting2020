@@ -12,18 +12,6 @@ class Submit extends Component {
     onChangeHandler = event => {
         var file = event.target.files[0];
         console.log(file);
-        /*
-        console.log(this.validateSize(event));
-        if (this.validateSize(event)) {
-            console.log(file);
-            // if return true allow to setState
-        
-            this.setState({
-                selectedFile: file
-            });
-
-        }
-        */
        this.setState({
         selectedFile: file
         });
@@ -48,22 +36,28 @@ class Submit extends Component {
             })
 
     };
-    /*
-    validateSize = (event) => {
-        let file = event.target.files[0];
-        let size = 300000;
-        let err = '';
-        console.log(file.size);
-        if (file.size > size) {
-            err = file.type + 'is too large, please pick a smaller file\n';
-            toast.error(err);
-        }
-        return true
-    };
-*/
+
+    downloadHandler = () => {
+        axios({
+            url: 'http://localhost:4000/download/ewhaian_application_37.docx',
+            method: 'GET',
+            responseType: 'blob', // important
+          }).then((response) => {
+            const url = window.URL.createObjectURL(new Blob([response.data]));
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', 'ewhaian_application_37.docx');
+            document.body.appendChild(link);
+            link.click();
+          });
+    }
+   
     render() {
         return (
             <div className="container">
+                <div className="row">
+                    <div onClick={this.downloadHandler}>지원서 다운로드</div>
+                </div>
                 <div className="row">
                     <div className="col-md-6">
                         <ToastContainer />
