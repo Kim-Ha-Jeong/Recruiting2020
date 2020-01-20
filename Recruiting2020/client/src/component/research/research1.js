@@ -40,11 +40,6 @@ export default class Research1 extends Component {
         this.onChangeQ16_4 = this.onChangeQ16_4.bind(this);
         this.onChangeQ17 = this.onChangeQ17.bind(this);
         this.onChangeQ18 = this.onChangeQ18.bind(this);
-        // this.onChangeQ19 = this.onChangeQ19.bind(this);
-        // this.onChangeQ20 = this.onChangeQ20.bind(this);
-        // this.onChangeQ21 = this.onChangeQ21.bind(this);
-        // this.onChangeQ22 = this.onChangeQ22.bind(this);
-        // this.onChangeQ23 = this.onChangeQ23.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
@@ -80,11 +75,6 @@ export default class Research1 extends Component {
             q16_4: '',
             q17: '',
             q18: ''
-            // q19: '',
-            // q20: '',
-            // q21: '',
-            // q22: '',
-            // q23: ''
         }
     }
 
@@ -291,7 +281,7 @@ export default class Research1 extends Component {
             q18: this.state.q18
         }
 
-        axios.post('http://localhost:4000/research1/add', research1)
+        axios.post('http://localhost:4000/research/add', research1)
             .then(res => console.log(res.data));
 
         this.setState({
@@ -305,10 +295,10 @@ export default class Research1 extends Component {
             q4_3: false,
             q4_4: false,
             q5: '',
-            q6_1: '',
-            q6_2: '',
-            q6_3: '',
-            q6_4: '',
+            q6_1: false,
+            q6_2: false,
+            q6_3: false,
+            q6_4: false,
             q7: '',
             q8_1: false,
             q8_2: false,
@@ -1104,7 +1094,7 @@ export default class Research1 extends Component {
                                     id="1" 
                                     value="1"
                                     checked={this.state.q17==='1'} 
-                                    onChange={this.onChange17}
+                                    onChange={this.onChangeQ17}
                                     />
                             <label className="form-check-label">다인다색 </label>
                         </div>
@@ -1115,7 +1105,7 @@ export default class Research1 extends Component {
                                     id="2" 
                                     value="2" 
                                     checked={this.state.q17==='2'} 
-                                    onChange={this.onChange17}
+                                    onChange={this.onChangeQ17}
                                     />
                             <label className="form-check-label">문화공감</label>
                         </div>
@@ -1126,7 +1116,7 @@ export default class Research1 extends Component {
                                     id="3" 
                                     value="3" 
                                     checked={this.state.q17==='3'} 
-                                    onChange={this.onChange17}
+                                    onChange={this.onChangeQ17}
                                     />
                             <label className="form-check-label">화연수첩</label>
                         </div>
@@ -1137,7 +1127,7 @@ export default class Research1 extends Component {
                                     id="4" 
                                     value="4" 
                                     checked={this.state.q17==='4'} 
-                                    onChange={this.onChange17}
+                                    onChange={this.onChangeQ17}
                                     />
                             <label className="form-check-label">기고만장</label>
                         </div>
@@ -1152,7 +1142,7 @@ export default class Research1 extends Component {
                                     id="1" 
                                     value="1"
                                     checked={this.state.q18==='1'} 
-                                    onChange={this.onChange18}
+                                    onChange={this.onChangeQ18}
                                     />
                             <label className="form-check-label">세 시간 이내 확인 가능</label><br/>
                         </div>
