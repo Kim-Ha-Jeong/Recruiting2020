@@ -13,7 +13,7 @@ import Result from './component/result/Result';
 import Pass from './component/result/Pass';
 import UnPass from './component/result/UnPass';
 import Undefine from './component/result/Undefine';
-
+import dnd from './component/dnd';
 
 class App extends Component{
   render(){
@@ -33,6 +33,7 @@ class App extends Component{
           <Route path="/result/pass" component={Pass} />
           <Route path="/result/unpass" component={UnPass} />
           <Route path="/result/undefine" component={Undefine} />
+          <Route path="/dnd" component={dnd}/>
         </div>
       </div>
     )
