@@ -14,6 +14,8 @@ import Pass from './component/result/Pass';
 import UnPass from './component/result/UnPass';
 import Undefine from './component/result/Undefine';
 import dnd from './component/dnd';
+import Research1 from './component/research/research1';
+import Research2 from './component/research/research2';
 
 class App extends Component{
   render(){
@@ -33,7 +35,11 @@ class App extends Component{
           <Route path="/result/pass" component={Pass} />
           <Route path="/result/unpass" component={UnPass} />
           <Route path="/result/undefine" component={Undefine} />
+
           <Route path="/dnd" component={dnd}/>
+
+          <Route path="/research1" component={Research1} />
+          <Route path="/research2" component={Research2} />
         </div>
       </div>
     )
