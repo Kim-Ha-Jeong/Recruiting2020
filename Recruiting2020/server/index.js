@@ -8,7 +8,8 @@ const config = require('./DB.js');
 const noticeRoute = require('./notice.route');
 const resultRoute = require('./result.route')
 const uploadRoute = require('./fileupload.route');
-
+const researchRoute = require('./research.route');
+const researchRoute2 = require('./research.route2');
 
 mongoose.Promise = global.Promise;
 mongoose.connect(config.DB, { useNewUrlParser: true }).then(
@@ -22,6 +23,8 @@ app.use(bodyParser.json());
 app.use('/notice', noticeRoute);
 app.use('/result', resultRoute);
 app.use('/upload', uploadRoute);
+app.use('/research', researchRoute);
+app.use('/research2', researchRoute2);
 
 app.use('/download',express.static('download'));
 app.use('/upload',express.static('uploads'));
