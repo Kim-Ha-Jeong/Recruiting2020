@@ -894,22 +894,22 @@ export default class Research1 extends Component {
                         <div className="form-check form-check-inline">
                             <input  className="form-check-input" 
                                     type="radio" 
-                                    name="q11" 
+                                    name="q12" 
                                     id="1" 
                                     value="1"
-                                    checked={this.state.q11==='1'} 
-                                    onChange={this.onChange12}
+                                    checked={this.state.q12==='1'} 
+                                    onChange={this.onChangeQ12}
                                     />
                             <label className="form-check-label">예</label>
                         </div>
                         <div className="form-check form-check-inline">
                             <input  className="form-check-input" 
                                     type="radio" 
-                                    name="q11" 
+                                    name="q12" 
                                     id="2" 
                                     value="2" 
-                                    checked={this.state.q11==='2'} 
-                                    onChange={this.onChange12}
+                                    checked={this.state.q12==='2'} 
+                                    onChange={this.onChangeQ12}
                                     />
                             <label className="form-check-label">아니오</label>
                         </div>
@@ -924,7 +924,7 @@ export default class Research1 extends Component {
                                     id="1" 
                                     value="1"
                                     checked={this.state.q13==='1'} 
-                                    onChange={this.onChange13}
+                                    onChange={this.onChangeQ13}
                                     />
                             <label className="form-check-label">대부분이 알고 있었다.</label><br/>
                         </div>
@@ -935,7 +935,7 @@ export default class Research1 extends Component {
                                     id="2" 
                                     value="2" 
                                     checked={this.state.q13==='2'} 
-                                    onChange={this.onChange13}
+                                    onChange={this.onChangeQ13}
                                     />
                             <label className="form-check-label">모르는 사람도 있었지만 알고 있는 사람이 더 많았다.</label><br/>
                         </div>
@@ -946,7 +946,7 @@ export default class Research1 extends Component {
                                     id="3" 
                                     value="3" 
                                     checked={this.state.q13==='3'} 
-                                    onChange={this.onChange13}
+                                    onChange={this.onChangeQ13}
                                     />
                             <label className="form-check-label">아는 사람도 있었지만 모르는 사람이 더 많았다.</label><br/>
                         </div>
@@ -957,7 +957,7 @@ export default class Research1 extends Component {
                                     id="4" 
                                     value="4" 
                                     checked={this.state.q13==='4'} 
-                                    onChange={this.onChange13}
+                                    onChange={this.onChangeQ13}
                                     />
                             <label className="form-check-label">대부분이 모르고 있었다.</label><br/>
                         </div>
@@ -972,7 +972,7 @@ export default class Research1 extends Component {
                                     id="1" 
                                     value="1"
                                     checked={this.state.q14==='1'} 
-                                    onChange={this.onChange14}
+                                    onChange={this.onChangeQ14}
                                     />
                             <label className="form-check-label">이벤트에 대한 호감이 높고 참여하고 싶어 했다.</label><br/>
                         </div>
@@ -983,7 +983,7 @@ export default class Research1 extends Component {
                                     id="2" 
                                     value="2" 
                                     checked={this.state.q14==='2'} 
-                                    onChange={this.onChange14}
+                                    onChange={this.onChangeQ14}
                                     />
                             <label className="form-check-label">이벤트에 대한 특별한 관심이나 호감이 없었다.</label><br/>
                         </div>
@@ -994,7 +994,7 @@ export default class Research1 extends Component {
                                     id="3" 
                                     value="3" 
                                     checked={this.state.q14==='3'} 
-                                    onChange={this.onChange14}
+                                    onChange={this.onChangeQ14}
                                     />
                             <label className="form-check-label">이벤트에 대한 호감이 낮고 참여하고 싶어 하지 않았다.</label><br/>
                         </div>
