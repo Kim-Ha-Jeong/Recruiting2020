@@ -5,7 +5,7 @@ import Home from './component/Home';
 import NoticeManager from './component/notice/NoticeManager';
 import Submit from './component/Submit';
 import FAQ from './component/FAQ';
-import Nav from './component/Nav';
+import Header from './component/Header';
 import Notice from './component/notice/Notice';
 import Edit from './component/notice/Edit'
 import Create from './component/notice/Create';
@@ -21,7 +21,7 @@ class App extends Component{
   render(){
     return(
       <div>
-        <Nav></Nav>
+        <Header></Header>
         <div>
           <About></About>
           <Route path="/" component={Home} exact={true} />
@@ -35,9 +35,7 @@ class App extends Component{
           <Route path="/result/pass" component={Pass} />
           <Route path="/result/unpass" component={UnPass} />
           <Route path="/result/undefine" component={Undefine} />
-
           <Route path="/dnd" component={dnd}/>
-
           <Route path="/research1" component={Research1} />
           <Route path="/research2" component={Research2} />
         </div>
