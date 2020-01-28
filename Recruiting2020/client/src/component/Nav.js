@@ -1,69 +1,47 @@
-import React, { useState } from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
-} from 'reactstrap';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import 'antd/dist/antd.css';
+import { Menu } from 'antd';
+import './Nav.css';
 
-const Navb = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => setIsOpen(!isOpen);
+class Nav extends Component {
+  state = {
+    current: false
+  };
 
-  return (
-    <div>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">Home</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                소개
-              </DropdownToggle>
-              <DropdownMenu>
-                <DropdownItem>
-                  <NavLink href="/about/ewhaian">
-                    이화이언 소개
-                  </NavLink>
-                </DropdownItem>
-                <DropdownItem>
-                  <NavLink href="/about/team">
-                    팀 소개
-                  </NavLink>
-                </DropdownItem>
-                <DropdownItem>
-                  <NavLink href="/about/OB">
-                    OB 소감
-                  </NavLink>
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-            <NavItem>
-              <NavLink href="/notice">공지사항</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/submit">지원서 제출</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/FAQ">FAQ</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/result">결과 확인</NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </Navbar>
-    </div>
-  );
+  handleClick = e => {
+    this.setState({
+      current: e.key,
+    });
+  };
+
+  render() {
+    return (
+      <Menu id="menu" onClick={this.handleClick} selectedKeys={[this.state.current]} mode={this.props.mode}>
+        <Menu.Item key="intro">
+          <NavLink to="/about/OB" className="link">
+            소개
+          </NavLink>
+        </Menu.Item>
+        <Menu.Item key="submit">
+          <NavLink to="/submit"className="link">
+            지원서 제출
+          </NavLink>
+        </Menu.Item>
+        <Menu.Item key="result">
+          <NavLink to="/result" className="link">
+            결과확인
+          </NavLink>
+        </Menu.Item>
+        <Menu.Item key="notice">
+          <NavLink to="/notice" className="link">
+            지원문의
+          </NavLink>
+        </Menu.Item>
+      </Menu>
+    );
+  }
 }
 
-export default Navb;
+export default Nav;
