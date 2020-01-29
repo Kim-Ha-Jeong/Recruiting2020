@@ -1,33 +1,27 @@
-#menu{
-    text-align:right;
-    border-bottom: none;
-    border-right: none;
+body{
+    overflow : hidden;
 }
 
-.ant-popover-arrow{
-    right: 5px !important;
-}
-
+/* 줄 간격 */
 .ant-row{
     margin: 2% 12%;
 }
 
+/* 로고 */
 .logo{
     width: 100%;
     height: 48px;
 }
 
+/* 메뉴 */
+#menu{
+    text-align:right;
+    border-bottom: none;
+}
+
+/* 링크 밑줄 없애기 */
 a {
     text-decoration:none !important;
-}
-
-#mobile-logo{
-    margin: 0 31.2%;
-}
-
-#popover{
-    text-align:center;
-    vertical-align: middle;
 }
 
 /* 색깔 바꾸기 */
@@ -69,6 +63,7 @@ a {
     background-color: #FEECF3;
 }
 
+/* 버튼 */
 #download{
     background-color : #EC1468;
     color : white;
@@ -83,9 +78,28 @@ a {
 
 .btn-wrap{
     text-align: center;
-    padding : 0.8% 0;
+    padding : 0.8% 0% 0.8% 2%;
 }
 
+
+/* 모바일 메뉴 */
+#popover{
+    text-align:center !important;
+    vertical-align: middle;
+    border-right: none;
+}
+
+/* 모바일 버전 로고 */
+#mobile-logo{
+    margin: 0 31.2%;
+}
+
+/* 모바일 화살표 방향 */
+.ant-popover-arrow{
+    right: 5px !important;
+}
+
+/* 모바일 조정 */
 @media(max-width:720px){
     .logo{
         height: 30px;

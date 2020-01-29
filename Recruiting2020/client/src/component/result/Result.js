@@ -1,81 +1,59 @@
-
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Row, Table } from 'antd';
+import TableRow from './Row';
+import './Result.css'
+export default class Pass extends Component {
 
-export default class Find extends Component {
   constructor(props) {
     super(props);
-    
-    this.onChangeName = this.onChangeName.bind(this);
-    this.onChangeStudent_id = this.onChangeStudent_id.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
-
     this.state = {
-      result:'',
-      name: '',
-      student_id: ''
-    }
+      result: []
+    };
   }
 
-  onChangeName(e) {
-    this.setState({
-      name: e.target.value
+  componentDidMount() {
+    axios.get('http://localhost:4000/result/' + this.props.match.params.key)
+      .then((res) => this.setState({
+        result: res.data
+      }))
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  tabRow() {
+    return this.state.result.map(function (object, i) {
+      return <TableRow obj={object} key={i} />;
     });
-  }
-  onChangeStudent_id(e) {
-    this.setState({
-      student_id: e.target.value
-    })  
-  }
-  
-  onSubmit(e) {
-    e.preventDefault();
-    axios.post('http://localhost:4000/result/find/'+this.state.student_id+"/"+this.state.name)
-        .then((res) => this.setState({
-          result: res.data
-        }))
-        .then(res => this.pass());
-  }
-
-  pass(){
-    if(this.state.result === "합격"){
-      this.props.history.push('/result/pass');
-    } else if(this.state.result === "불합격"){
-      this.props.history.push('/result/unpass');
-    } else {
-        this.props.history.push('/result/undefine')
-    }
   }
 
   render() {
-    
     return (
-        <div className="container-fluid" style={{ marginTop: 10 }}>
-            <h3 align="center">결과 확인</h3>
-            <form onSubmit={this.onSubmit}>
-                <div className="form-group">
-                    <label>이름</label>
-                    <input 
-                      type="text" 
-                      className="form-control"
-                      onChange={this.onChangeName}
-                      />
-                </div>
-                <div className="form-group">
-                    <label>학번</label>
-                    <input type="text" 
-                      className="form-control"
-                      onChange={this.onChangeStudent_id}
-                      />
-                </div>
-                <div className="form-group">
-                    <input type="submit" 
-                      value="결과 확인하기" 
-                      className="btn btn-primary"/>
-                </div>
-            </form>
+      <div id="wrapper">
+        <Row>
+          <h2 id="title" align="center">결과 확인</h2>
+        </Row>
+        <hr />
+        <div className="result-container">
+          <h4 align="center" id="result-title">합격 / 불합격 문구</h4>
+          <p align="center">추가 문구 및 안내사항</p>
+          <table id="result-table">
+            <thead>
+              <tr>
+                <th>이름</th>
+                <th>학번</th>
+                <th>팀</th>
+                <th>합격 여부</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.tabRow()}
+            </tbody>
+          </table>
+        </div>
       </div>
-
-    )
+    );
   }
+
 }
