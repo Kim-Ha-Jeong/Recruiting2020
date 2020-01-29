@@ -18,14 +18,14 @@ class Nav extends Component {
 
   render() {
     return (
-      <Menu id="menu" onClick={this.handleClick} selectedKeys={[this.state.current]} mode={this.props.mode}>
+      <Menu id={this.props.id} onClick={this.handleClick} selectedKeys={[this.state.current]} mode={this.props.mode}>
         <Menu.Item key="intro">
           <NavLink to="/about/OB" className="link">
             소개
           </NavLink>
         </Menu.Item>
         <Menu.Item key="submit">
-          <NavLink to="/submit"className="link">
+          <NavLink to="/submit" className="link">
             지원서 제출
           </NavLink>
         </Menu.Item>

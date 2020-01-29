@@ -29,9 +29,23 @@ resultRoutes.get("/",function (req, res) {
 resultRoutes.route('/find/:student_id/:name').post(function (req, res) {
   let id = req.params.student_id;
   let qname = req.params.name;
-  Result.find({student_id:id, name: qname},{_id:0,name: 0, student_id: 0,__v:0}, function (err, result){
-      var arr = result.toString().split(`'`);
-      res.json(arr[1]);
+  Result.find({student_id:id, name: qname}, function (err, result){
+      res.json(result);
+  });
+});
+
+resultRoutes.route('/find/:student_id/:name').get(function (req, res) {
+  let id = req.params.student_id;
+  let qname = req.params.name;
+  Result.find({student_id:id, name: qname}, function (err, result){
+      res.json(result);
+  });
+});
+
+resultRoutes.route('/:key').get(function (req, res) {
+  let k = req.params.key;
+  Result.find({key:k}, function (err, result){
+      res.json(result);
   });
 });
 

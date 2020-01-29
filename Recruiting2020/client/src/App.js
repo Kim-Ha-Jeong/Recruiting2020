@@ -9,8 +9,8 @@ import Header from './component/Header';
 import Notice from './component/notice/Notice';
 import Edit from './component/notice/Edit'
 import Create from './component/notice/Create';
+import Find from './component/result/Find';
 import Result from './component/result/Result';
-import Pass from './component/result/Pass';
 import UnPass from './component/result/UnPass';
 import Undefine from './component/result/Undefine';
 import dnd from './component/dnd';
@@ -31,8 +31,8 @@ class App extends Component{
           <Route path='/noticeManager/edit/:id' component={Edit} />
           <Route path="/noticeManager" component={NoticeManager} exact={true} />
           <Route path="/noticeManager/create" component={Create} />
-          <Route path="/result" component={Result} exact={true} />
-          <Route path="/result/pass" component={Pass} />
+          <Route path="/result" component={Find} exact={true} />
+          <Route path="/result/:key" component={Result} />
           <Route path="/result/unpass" component={UnPass} />
           <Route path="/result/undefine" component={Undefine} />
           <Route path="/dnd" component={dnd}/>
