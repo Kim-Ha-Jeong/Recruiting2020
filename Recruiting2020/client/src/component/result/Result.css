@@ -24,7 +24,7 @@ hr{
 }
 
 #wrapper{
-    margin-top: 6%;
+    margin-top: 5%;
 }
 
 @media(max-width:720px){
@@ -47,7 +47,7 @@ hr{
     table-layout: fixed;
 }
 
-thead{
+#result-thead{
     color: white;
     background-color:  #EC1468;
     line-height: 2.5;
@@ -63,7 +63,7 @@ table th:last-child{
     border-radius:0 20px 20px 0;
 }
 
-th{
+.result-th{
     font-weight: lighter;
     border: 0.35px solid white;
 }
@@ -82,3 +82,7 @@ p{
     margin-bottom: 3%;
 }
 
+.form-control:focus{
+    border-color: rgba(236,20,104,0.25) !important;
+    box-shadow: 0 0 0 0.2rem rgba(236, 20, 104, .25) !important;
+}

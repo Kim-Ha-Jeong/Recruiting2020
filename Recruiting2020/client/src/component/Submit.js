@@ -3,6 +3,7 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import Create from './result/Create';
 import './Submit.css';
+import {Row} from 'antd';
 
 class Submit extends Component {
     constructor(props) {
@@ -40,27 +41,15 @@ class Submit extends Component {
 
     };
 
-    downloadHandler = () => {
-        axios({
-            url: 'http://localhost:4000/download/ewhaian_application_37.docx',
-            method: 'GET',
-            responseType: 'blob', // important
-          }).then((response) => {
-            const url = window.URL.createObjectURL(new Blob([response.data]));
-            const link = document.createElement('a');
-            link.href = url;
-            link.setAttribute('download', 'ewhaian_application_37.docx');
-            document.body.appendChild(link);
-            link.click();
-          });
-    }
-   
     render() {
         return (
-            <div className="container">
+                <div id="wrapper">
+                    <Row>
+                        <h2 id="title" align="center">지원서 제출</h2>
+                    </Row>
+                    <hr />
                 <div className="row">
                     <div className="col-md-6">
-                    <button className="btn btn-primary" onClick={this.downloadHandler}>지원서 다운로드</button>
                         <ToastContainer />
                         <form name="file" method="post" encType="multipart/form-data">
                             <div className="file-upload-wrapper" >

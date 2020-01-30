@@ -6,6 +6,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const config = require('./DB.js');
 const noticeRoute = require('./notice.route');
+const FAQRoute = require('./FAQ.route');
 const resultRoute = require('./result.route')
 const uploadRoute = require('./fileupload.route');
 const researchRoute = require('./research.route');
@@ -21,6 +22,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.use('/notice', noticeRoute);
+app.use('/FAQ', FAQRoute);
 app.use('/result', resultRoute);
 app.use('/upload', uploadRoute);
 app.use('/research', researchRoute);

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Row, Table } from 'antd';
+import { Row } from 'antd';
 import TableRow from './Row';
 import './Result.css'
+
 export default class Pass extends Component {
 
   constructor(props) {
@@ -39,12 +40,12 @@ export default class Pass extends Component {
           <h4 align="center" id="result-title">합격 / 불합격 문구</h4>
           <p align="center">추가 문구 및 안내사항</p>
           <table id="result-table">
-            <thead>
+            <thead id="result-thead">
               <tr>
-                <th>이름</th>
-                <th>학번</th>
-                <th>팀</th>
-                <th>합격 여부</th>
+                <th className="result-th">이름</th>
+                <th className="result-th">학번</th>
+                <th className="result-th">팀</th>
+                <th className="result-th">합격 여부</th>
               </tr>
             </thead>
             <tbody>
