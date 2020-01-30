@@ -4,7 +4,6 @@ import About from './component/About';
 import Home from './component/Home';
 import NoticeManager from './component/notice/NoticeManager';
 import Submit from './component/Submit';
-import FAQ from './component/FAQ';
 import Header from './component/Header';
 import Notice from './component/notice/Notice';
 import Edit from './component/notice/Edit'
@@ -27,7 +26,7 @@ class App extends Component{
           <Route path="/" component={Home} exact={true} />
           <Route path="/notice" component={Notice} />
           <Route path="/submit" component={Submit} />
-          <Route path="/FAQ" component={FAQ} />
+          <Route path="/FAQ" component={Notice} />
           <Route path='/noticeManager/edit/:id' component={Edit} />
           <Route path="/noticeManager" component={NoticeManager} exact={true} />
           <Route path="/noticeManager/create" component={Create} />

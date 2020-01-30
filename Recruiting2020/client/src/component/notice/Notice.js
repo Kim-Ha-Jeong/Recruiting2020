@@ -1,45 +1,19 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import Row from './Row';
+import { Row } from 'antd';
+import TableRow from './Row';
+import './Notice.css';
 
-export default class Index extends Component {
+export default class Notice extends Component {
 
-  constructor(props) {
-      super(props);
-      this.state = {result: []};
-    }
-    componentDidMount(){
-      axios.get('http://localhost:4000/notice')
-        .then(response => {
-          this.setState({ result: response.data });
-        })
-        .catch(function (error) {
-          console.log(error);
-        })
-    }
-    tabRow(){
-      return this.state.result.map(function(object, i){
-          return <Row obj={object} key={i} />;
-      });
-    }
-
-    render() {
-      return (
-        <div>
-          <h3 align="center">공지사항</h3>
-          <table className="table table-striped" style={{ marginTop: 20 }}>
-            <thead>
-              <tr>
-                <th>번호</th>
-                <th>제목</th>
-                <th>내용</th>
-              </tr>
-            </thead>
-            <tbody>
-              { this.tabRow() }
-            </tbody>
-          </table>
-        </div>
-      );
-    }
+  render() {
+    return (
+      <div id="wrapper">
+        <Row>
+          <h2 id="title" align="center">지원 문의</h2>
+        </Row>
+        <hr />
+        <TableRow></TableRow>
+      </div>
+    );
   }
+}
