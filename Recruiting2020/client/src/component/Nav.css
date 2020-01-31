@@ -1,10 +1,9 @@
-body{
-    overflow : hidden;
-}
-
 /* 줄 간격 */
 .ant-row{
     margin: 2% 12%;
+}
+#computer{
+    margin: 1% 12%!important;
 }
 
 /* 로고 */

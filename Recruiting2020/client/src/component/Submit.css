@@ -4,3 +4,89 @@
     border: solid 1px black;
     border-radius: 10px;
 }
+
+.submit-container{
+    margin: 1% 25%;
+}
+
+.submit-label{
+    font-size: 1rem !important;
+    color: black !important;
+    margin: 0 !important;
+}
+
+.ant-upload.ant-upload-drag p.ant-upload-drag-icon{
+    margin-bottom: 10px;
+}
+
+.ant-upload.ant-upload-drag p.ant-upload-drag-icon .anticon{
+    color: #EC1468;
+    font-size: 25px;
+}
+
+p.ant-upload-text{
+    font-size: 14px !important;
+}
+
+p.ant-upload-hint{
+    font-size: 12px !important;
+}
+
+.ant-upload.ant-upload-drag{
+    border: 1px solid #d9d9d9!important;
+    background-color: white;
+}
+
+.ant-upload.ant-upload-drag:focus,.ant-upload.ant-upload-drag:hover{
+    border-color: rgba(236,20,104,0.5) !important;
+    box-shadow: 0 0 0 0.2rem rgba(236, 20, 104, .25) !important;
+}
+
+.ant-form-item{
+    margin: 0 !important;
+}
+
+.ant-upload.ant-upload-drag .ant-upload{
+    padding: 12px 0 !important;
+}
+
+#submit-button{
+    text-align: center !important;
+    color: #EC1468;
+    border-color: rgba(236, 20, 104, .1);
+    margin-top: 20%;
+}
+
+#submit-button:hover{
+    box-shadow: 0px 5px 10px 0px rgba(236, 20, 104, .5) !important;
+}
+
+.ant-col-offset-10{
+    margin-left: 42.5% !important;
+}
+
+@media(max-width:720px){
+    .submit-container{
+        margin : 2% 12%;
+    }
+    #title{
+        font-size: 1.4rem;
+    }
+    #wrapper{
+        margin-top: 30%;
+    }
+    .ant-col-offset-10{
+        margin-left: 34.3% !important;
+    }
+    #submit-button{
+        margin-top: 10%;
+    }
+}
+
+.ant-upload-list-item:hover .ant-upload-list-item-info{
+    background-color: #FBD0E1;
+}
+
+.ant-upload-list-item-card-actions a:first-child{
+    display: none;
+}
