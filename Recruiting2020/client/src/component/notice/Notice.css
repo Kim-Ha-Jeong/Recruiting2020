@@ -1,5 +1,6 @@
 hr{
-    border: 2px solid #EC1468 !important;
+    height: 2px!important;
+    background-color: #EC1468;
 }
 
 #title{
@@ -7,12 +8,12 @@ hr{
 }
 
 #wrapper{
-    margin-top: 5%;
+    margin-top: 4%;
 }
 
 .notice-container{
     margin: 0 20%;
-    font-size: 14px;
+    font-size: 1rem;
 }
 
 #notice-table{
@@ -73,4 +74,10 @@ table th:last-child{
 
 .ant-collapse-content{
     background-color: #FBD0E1;
+}
+
+@media(max-width:720px){
+    .notice-container{
+        margin : 2% 12%;
+    }
 }

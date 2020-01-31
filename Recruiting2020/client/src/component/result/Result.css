@@ -16,7 +16,8 @@
 }
 
 hr{
-    border: 2px solid #EC1468 !important;
+    height: 2px!important;
+    background-color: #EC1468;
 }
 
 #title{
@@ -24,7 +25,7 @@ hr{
 }
 
 #wrapper{
-    margin-top: 5%;
+    margin-top: 4%;
 }
 
 @media(max-width:720px){
