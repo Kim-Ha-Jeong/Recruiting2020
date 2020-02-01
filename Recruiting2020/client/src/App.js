@@ -10,7 +10,6 @@ import Edit from './component/notice/Edit'
 import Create from './component/notice/Create';
 import Find from './component/result/Find';
 import Result from './component/result/Result';
-import UnPass from './component/result/UnPass';
 import Undefine from './component/result/Undefine';
 import Research1 from './component/research/research1';
 import Research2 from './component/research/research2';
@@ -31,7 +30,6 @@ class App extends Component{
           <Route path="/noticeManager/create" component={Create} />
           <Route path="/result" component={Find} exact={true} />
           <Route path="/result/:key" component={Result} />
-          <Route path="/result/unpass" component={UnPass} />
           <Route path="/result/undefine" component={Undefine} />
           <Route path="/research1" component={Research1} />
           <Route path="/research2" component={Research2} />
