@@ -62,6 +62,10 @@ a {
     background-color: #FEECF3;
 }
 
+.ant-menu-item > a:hover{
+    color: #EC1468 !important;
+}
+
 /* 버튼 */
 #download{
     background-color : #EC1468;

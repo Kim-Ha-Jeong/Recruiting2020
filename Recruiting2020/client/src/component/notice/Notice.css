@@ -1,21 +1,29 @@
+/* 공지사항&FAQ css */
+/* Row.js, Notice.js 적용 */
+
+/*전체 감싸는 태그*/
+#wrapper{
+    margin-top: 4%;
+}
+
+/*제목(공통)*/
+#title{
+    font-weight: bold;
+}
+
+/*제목 밑 줄*/
 hr{
     height: 2px!important;
     background-color: #EC1468;
 }
 
-#title{
-    font-weight: bold;
-}
-
-#wrapper{
-    margin-top: 4%;
-}
-
+/* 공지사항 내용 감싸는 태그*/
 .notice-container{
     margin: 0 20%;
     font-size: 1rem;
 }
 
+/* 공지사항&FAQ 이동 버튼 틀*/
 #notice-table{
     width: 100%;
     text-align: center;
@@ -25,6 +33,7 @@ hr{
     width: 200px;
 }
 
+/* 공지사항&FAQ 이동 버튼 */
 #notice-thead{
     color: white;
     background-color:  #EC1468;
@@ -45,6 +54,11 @@ table th:last-child{
     border-right: 0.35px solid white;
 }
 
+#noticeLink, #FAQLink{
+    color : white !important;
+}
+
+/* accordion 조정 */
 .ant-collapse{
     background-color: white;
     border-top: 1px solid #d9d9d9;
@@ -63,19 +77,17 @@ table th:last-child{
     margin-right: 10px;
 }
 
+.ant-collapse-content{
+    background-color: #FBD0E1;
+}
+
+/* 이모티콘 */
 .anticon{
     vertical-align: 0.125em;
     color: #EC1468;
 }
 
-#noticeLink, #FAQLink{
-    color : white !important;
-}
-
-.ant-collapse-content{
-    background-color: #FBD0E1;
-}
-
+/* 모바일 버전 조정 */
 @media(max-width:720px){
     .notice-container{
         margin : 2% 12%;

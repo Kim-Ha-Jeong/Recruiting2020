@@ -1,7 +1,16 @@
-.main-container{
+/* find.js 적용 */
+/* 내용 감싸는 태그 */
+.find-container{
     margin : 3% 25%;
 }
 
+/* 성명 학번 입력 창 */
+.form-control:focus{
+    border-color: rgba(236,20,104,0.25) !important;
+    box-shadow: 0 0 0 0.2rem rgba(236, 20, 104, .25) !important;
+}
+
+/*결과 확인 제출 버튼 */
 #submit-btn{
     color: white;
     background-color: #EC1468;
@@ -11,25 +20,14 @@
     margin-top: 0.5rem;
 }
 
+/* 결과 확인 제출 버튼 hover */
 #submit-btn:hover{
     border : 1px solid #EC1468;
 }
 
-hr{
-    height: 2px!important;
-    background-color: #EC1468;
-}
-
-#title{
-    font-weight: bold;
-}
-
-#wrapper{
-    margin-top: 4%;
-}
-
+/* 모바일 간격 조정 */
 @media(max-width:720px){
-    .main-container{
+    .find-container{
         margin : 2% 12%;
     }
     #title{
@@ -40,6 +38,24 @@ hr{
     }
 }
 
+/* Result.js 적용 */
+/* 결과 내용 감싸는 태그 */
+.result-container{
+    margin : 3% 25%;
+    font-size: 14px;
+}
+
+/* 결과 추가 설명 */
+#result-title{
+    margin-bottom: 3%;
+}
+
+p{
+    color: #EC1468;
+    margin-bottom: 3%;
+}
+
+/* 결과 db */
 #result-table{
     width: 100%;
     text-align: center;
@@ -67,23 +83,4 @@ table th:last-child{
 .result-th{
     font-weight: lighter;
     border: 0.35px solid white;
-}
-
-#result-title{
-    margin-bottom: 3%;
-}
-
-.result-container{
-    margin : 3% 25%;
-    font-size: 14px;
-}
-
-p{
-    color: #EC1468;
-    margin-bottom: 3%;
-}
-
-.form-control:focus{
-    border-color: rgba(236,20,104,0.25) !important;
-    box-shadow: 0 0 0 0.2rem rgba(236, 20, 104, .25) !important;
 }
