@@ -20,7 +20,7 @@ class Nav extends Component {
     return (
       <Menu id={this.props.id} onClick={this.handleClick} selectedKeys={[this.state.current]} mode={this.props.mode}>
         <Menu.Item key="intro">
-          <NavLink to="/about/OB" className="link">
+          <NavLink to="/" className="link">
             소개
           </NavLink>
         </Menu.Item>
