@@ -1,0 +1,122 @@
+/* 줄 간격 */
+.ant-row{
+    margin: 2% 12%;
+}
+#computer{
+    margin: 1% 12%!important;
+}
+
+/* 로고 */
+.logo{
+    width: 100%;
+    height: 48px;
+}
+
+/* 메뉴 */
+#menu{
+    text-align:right;
+    border-bottom: none;
+}
+
+/* 링크 밑줄 없애기 */
+a {
+    text-decoration:none !important;
+}
+
+/* 색깔 바꾸기 */
+.ant-menu-horizontal > .ant-menu-item-selected > a{
+    color: #EC1468 !important;
+}
+
+.ant-menu-horizontal > .ant-menu-item > a:hover{
+    color: #EC1468 !important;
+}
+
+.ant-menu-horizontal > .ant-menu-item:hover, 
+.ant-menu-horizontal > .ant-menu-submenu:hover, 
+.ant-menu-horizontal > .ant-menu-item-active, 
+.ant-menu-horizontal > .ant-menu-submenu-active, 
+.ant-menu-horizontal > .ant-menu-item-open, 
+.ant-menu-horizontal > .ant-menu-submenu-open, 
+.ant-menu-horizontal > .ant-menu-item-selected, 
+.ant-menu-horizontal > .ant-menu-submenu-selected{
+    border-bottom: 2px solid #EC1468;
+}
+
+.ant-menu-item:hover, 
+.ant-menu-submenu:hover, 
+.ant-menu-item-active, 
+.ant-menu-submenu-active, 
+.ant-menu-item-open, 
+.ant-menu-submenu-open, 
+.ant-menu-item-selected, 
+.ant-menu-submenu-selected{
+    color: #EC1468 !important;
+}
+
+.ant-menu-item-selected > a, .ant-menu-item-selected > a:hover{
+    color: #EC1468 !important;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected{
+    background-color: #FEECF3;
+}
+
+.ant-menu-item > a:hover{
+    color: #EC1468 !important;
+}
+
+/* 버튼 */
+#download{
+    background-color : #EC1468;
+    color : white;
+    border-color :  #EC1468;
+}
+
+#ewhaian{
+    background-color : white;
+    color : #EC1468;
+    border-color :  #EC1468;
+}
+
+.btn-wrap{
+    text-align: center;
+    padding : 0.8% 0% 0.8% 2%;
+}
+
+
+/* 모바일 메뉴 */
+#popover{
+    text-align:center !important;
+    vertical-align: middle;
+    border-right: none;
+}
+
+/* 모바일 버전 로고 */
+#mobile-logo{
+    margin: 0 31.2%;
+}
+
+/* 모바일 화살표 방향 */
+.ant-popover-arrow{
+    right: 5px !important;
+}
+
+/* 모바일 조정 */
+@media(max-width:720px){
+    .logo{
+        height: 30px;
+    }
+    .ant-row{
+        margin: 3% 0;
+    }
+    #computer{
+        display: none;
+    }
+}
+
+@media(min-width:720px){
+    #mobile{
+        display: none;
+    }
+}

@@ -1,0 +1,86 @@
+/* find.js 적용 */
+/* 내용 감싸는 태그 */
+.find-container{
+    margin : 3% 25%;
+}
+
+/* 성명 학번 입력 창 */
+.form-control:focus{
+    border-color: rgba(236,20,104,0.25) !important;
+    box-shadow: 0 0 0 0.2rem rgba(236, 20, 104, .25) !important;
+}
+
+/*결과 확인 제출 버튼 */
+#submit-btn{
+    color: white;
+    background-color: #EC1468;
+    padding : 5px 24px;
+    height: 35px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* 결과 확인 제출 버튼 hover */
+#submit-btn:hover{
+    border : 1px solid #EC1468;
+}
+
+/* 모바일 간격 조정 */
+@media(max-width:720px){
+    .find-container{
+        margin : 2% 12%;
+    }
+    #title{
+        font-size: 1.4rem;
+    }
+    #wrapper{
+        margin-top: 30%;
+    }
+}
+
+/* Result.js 적용 */
+/* 결과 내용 감싸는 태그 */
+.result-container{
+    margin : 3% 25%;
+    font-size: 14px;
+}
+
+/* 결과 추가 설명 */
+#result-title{
+    margin-bottom: 3%;
+}
+
+p{
+    color: #EC1468;
+    margin-bottom: 3%;
+}
+
+/* 결과 db */
+#result-table{
+    width: 100%;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 0 25px;
+    table-layout: fixed;
+}
+
+#result-thead{
+    color: white;
+    background-color:  #EC1468;
+    line-height: 2.5;
+    margin-bottom: 5%;
+}
+
+table th:first-child{
+    border-radius:20px 0 0 20px;
+   
+}
+  
+table th:last-child{
+    border-radius:0 20px 20px 0;
+}
+
+.result-th{
+    font-weight: lighter;
+    border: 0.35px solid white;
+}

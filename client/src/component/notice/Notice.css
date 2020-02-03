@@ -1,0 +1,95 @@
+/* 공지사항&FAQ css */
+/* Row.js, Notice.js 적용 */
+
+/*전체 감싸는 태그*/
+#wrapper{
+    margin-top: 4%;
+}
+
+/*제목(공통)*/
+#title{
+    font-weight: bold;
+}
+
+/*제목 밑 줄*/
+hr{
+    height: 2px!important;
+    background-color: #EC1468;
+}
+
+/* 공지사항 내용 감싸는 태그*/
+.notice-container{
+    margin: 0 20%;
+    font-size: 1rem;
+}
+
+/* 공지사항&FAQ 이동 버튼 틀*/
+#notice-table{
+    width: 100%;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 0 25px;
+    table-layout: fixed;
+    width: 200px;
+}
+
+/* 공지사항&FAQ 이동 버튼 */
+#notice-thead{
+    color: white;
+    background-color:  #EC1468;
+    line-height: 2.5;
+    margin-bottom: 5%;
+}
+
+table th:first-child{
+    border-radius:20px 0 0 20px;
+}
+  
+table th:last-child{
+    border-radius:0 20px 20px 0;
+}
+
+.notice-th{
+    font-weight: lighter;
+    border-right: 0.35px solid white;
+}
+
+#noticeLink, #FAQLink{
+    color : white !important;
+}
+
+/* accordion 조정 */
+.ant-collapse{
+    background-color: white;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    border-radius: 0px;
+}
+
+.ant-collapse > .ant-collapse-item:last-child{
+    border-radius: 0px !important;
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-extra{
+    float: left;
+    margin-right: 10px;
+}
+
+.ant-collapse-content{
+    background-color: #FBD0E1;
+}
+
+/* 이모티콘 */
+.anticon{
+    vertical-align: 0.125em;
+    color: #EC1468;
+}
+
+/* 모바일 버전 조정 */
+@media(max-width:720px){
+    .notice-container{
+        margin : 2% 12%;
+    }
+}
