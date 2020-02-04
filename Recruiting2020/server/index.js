@@ -11,6 +11,7 @@ const resultRoute = require('./result.route')
 const uploadRoute = require('./fileupload.route');
 const researchRoute = require('./research.route');
 const researchRoute2 = require('./research.route2');
+const path = require('path');
 
 mongoose.Promise = global.Promise;
 mongoose.connect(config.DB, { useNewUrlParser: true }).then(
@@ -20,6 +21,11 @@ mongoose.connect(config.DB, { useNewUrlParser: true }).then(
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+
+app.use(express.static('../client/build'));
+app.get('*', (req, res) => {
+res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+});
 
 app.use('/notice', noticeRoute);
 app.use('/FAQ', FAQRoute);
