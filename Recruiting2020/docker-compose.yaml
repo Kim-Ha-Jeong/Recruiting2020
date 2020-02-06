@@ -18,7 +18,7 @@ services:
       - /app/node_modules      
     environment:
       - NODE_PATH=src
-      - PORT=3050
+      - PORT=4000
       - DB_HOST=mongo
       - DB=test
       - REDIS_HOST=redis
