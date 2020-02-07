@@ -11,5 +11,5 @@ RUN npm install
 #소스 복사 
 COPY . .
 
-#client 소스 실행
+#client 소스 실행...
 CMD ["npm","run","start"]
