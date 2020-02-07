@@ -22,6 +22,7 @@ mongoose.connect(config.DB, { useNewUrlParser: true }).then(
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
+app.use(express.static(path.join(__dirname, "../client/build")))
 app.use('/notice', noticeRoute);
 app.use('/FAQ', FAQRoute);
 app.use('/result', resultRoute);
