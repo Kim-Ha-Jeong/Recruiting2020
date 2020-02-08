@@ -37,7 +37,7 @@ class Row extends Component {
 
   componentDidMount() {
     if (window.location.pathname === '/notice') {
-      axios.get('http://localhost:4000/notice')
+      axios.get('/apiServer/notice')
         .then(response => {
           this.setState({ result: response.data });
         })
@@ -47,7 +47,7 @@ class Row extends Component {
       var boldChange = document.getElementById('noticeLink');
       boldChange.style.fontWeight = 'bold';
     } else if(window.location.pathname === '/FAQ') {
-      axios.get('http://localhost:4000/FAQ')
+      axios.get('/apiServer/FAQ')
         .then(response => {
           this.setState({ result: response.data });
         })

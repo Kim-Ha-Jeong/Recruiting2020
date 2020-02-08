@@ -35,7 +35,7 @@ class Find extends Component {
     e.preventDefault();
     this.props.form.validateFields((err, values) =>{
       if(!err){
-        axios.post('/api/result/find/' + this.state.student_id + "/" + this.state.name)
+        axios.post('/apiServer/result/find/' + this.state.student_id + "/" + this.state.name)
       .then((res) => this.setState({
         result: res.data
       }))

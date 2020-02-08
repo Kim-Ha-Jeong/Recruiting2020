@@ -34,7 +34,7 @@ export default class Find extends Component {
         name: this.state.name,
         student_id: this.state.student_id
     };
-    axios.post('http://localhost:4000/result/add/',obj)
+    axios.post('/apiServer/result/add/',obj)
         .then(res => console.log(res.data));
 
     this.setState({

@@ -60,7 +60,7 @@ class Demo extends React.Component {
           name: this.state.name,
           student_id: this.state.student_id
         };
-        axios.post('http://localhost:4000/result/add/', obj)
+        axios.post('/apiServer/result/add/', obj)
           .then(res => console.log(res.data));
     
         this.setState({
@@ -123,7 +123,7 @@ class Demo extends React.Component {
                 valuePropName: 'fileList',
                 getValueFromEvent: this.onChangeHandler,
               })(
-                <Upload.Dragger name="file" action="http://localhost:4000/upload" onRemove="true">
+                <Upload.Dragger name="file" action="/apiServer/upload" onRemove="true">
                   <p className="ant-upload-drag-icon">
                     <Icon type="plus-circle" />
                   </p>
