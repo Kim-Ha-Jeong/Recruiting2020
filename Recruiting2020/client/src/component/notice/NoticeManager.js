@@ -11,7 +11,7 @@ export default class Index extends Component {
     };
   }
   componentDidMount() {
-    axios.get('http://localhost:4000/notice')
+    axios.get('/apiServer/notice')
       .then(response => {
         this.setState({ result: response.data });
       })

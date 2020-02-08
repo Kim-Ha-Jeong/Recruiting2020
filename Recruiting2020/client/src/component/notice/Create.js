@@ -38,7 +38,7 @@ export default class Create extends Component {
       title: this.state.title,
       desc: this.state.desc
     };
-    axios.post('http://localhost:4000/notice/add', obj)
+    axios.post('/apiServer/notice/add', obj)
         .then(res => console.log(res.data));
     
     this.setState({

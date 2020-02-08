@@ -31,7 +31,7 @@ class Header extends Component {
 
   downloadHandler = () => {
     axios({
-      url: 'http://localhost:4000/download/ewhaian_application_37.docx',
+      url: '/apiServer/download/ewhaian_application_37.docx',
       method: 'GET',
       responseType: 'blob', // important
     }).then((response) => {
