@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './Notice.css';
 import { Collapse,Icon } from 'antd';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const { Panel } = Collapse;
 
@@ -95,10 +96,10 @@ class Row extends Component {
             <thead id="notice-thead">
               <tr>
                 <th className="notice-th">
-                  <a href="/notice" id="noticeLink">공지사항</a>
+                  <Link to="/notice" id="noticeLink">공지사항</Link>
                 </th>
                 <th className="notice-th">
-                  <a href="/FAQ" id="FAQLink">FAQ</a>
+                  <Link to="/FAQ" id="FAQLink">FAQ</Link>
                 </th>
               </tr>
             </thead>
