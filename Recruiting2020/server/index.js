@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "../client/build")))
 app.use('/notice', noticeRoute);
 app.use('/FAQ', FAQRoute);
-app.use('/result', resultRoute);
+app.use('/api/result', resultRoute);
 app.use('/upload', uploadRoute);
 app.use('/research', researchRoute);
 app.use('/research2', researchRoute2);
