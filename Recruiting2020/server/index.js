@@ -23,15 +23,15 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, "../client/build")))
-app.use('/notice', noticeRoute);
-app.use('/FAQ', FAQRoute);
+app.use('/api/notice', noticeRoute);
+app.use('/api/FAQ', FAQRoute);
 app.use('/api/result', resultRoute);
-app.use('/upload', uploadRoute);
-app.use('/research', researchRoute);
-app.use('/research2', researchRoute2);
+app.use('/api/upload', uploadRoute);
+app.use('/api/research', researchRoute);
+app.use('/api/research2', researchRoute2);
 
-app.use('/download',express.static('download'));
-app.use('/upload',express.static('uploads'));
+app.use('/api/download',express.static('download'));
+app.use('/api/upload',express.static('uploads'));
 
 app.use(cors());
 
