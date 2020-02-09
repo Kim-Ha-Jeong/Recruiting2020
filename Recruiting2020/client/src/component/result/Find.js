@@ -52,7 +52,7 @@ class Find extends Component {
         key: x.key
       })))
       .then(res => {
-        if(this.state.key === undefined){
+        if(this.state.key === ''){
           this.props.history.push('/result/undefine')
         } else {
           this.props.history.push('/result/' + this.state.key)
