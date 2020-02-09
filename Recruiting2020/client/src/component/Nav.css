@@ -8,7 +8,7 @@
 
 /* 로고 */
 .logo{
-    width: 100%;
+    width: 110%;
     height: 48px;
 }
 
@@ -114,7 +114,7 @@ a {
         display: none;
     }
     #menu-icon{
-        vertical-align: -1.5em !important;
+        vertical-align: -0.15em !important;
     }
 }
 
