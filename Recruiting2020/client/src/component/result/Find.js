@@ -10,12 +10,14 @@ class Find extends Component {
 
     this.onChangeName = this.onChangeName.bind(this);
     this.onChangeStudent_id = this.onChangeStudent_id.bind(this);
+    this.onChangeEwhaian_id = this.onChangeEwhaian_id.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
       result: '',
       name: '',
       student_id: '',
+      ewhaian_id: '',
       key: ''
     }
   }
@@ -25,17 +27,24 @@ class Find extends Component {
       name: e.target.value
     });
   }
+
   onChangeStudent_id(e) {
     this.setState({
       student_id: e.target.value
     })
   }
 
+  onChangeEwhaian_id(e) {
+    this.setState({
+      ewhaian_id: e.target.value
+    });
+  }
+
   onSubmit(e) {
     e.preventDefault();
     this.props.form.validateFields((err, values) =>{
       if(!err){
-        axios.post('/apiServer/result/find/' + this.state.student_id + "/" + this.state.name)
+        axios.post('/apiServer/result/find/' + this.state.student_id + "/" + this.state.name + "/" + this.state.ewhaian_id)
       .then((res) => this.setState({
         result: res.data
       }))
@@ -82,6 +91,18 @@ class Find extends Component {
                   <input type="text"
                     className="form-control"
                     onChange={this.onChangeStudent_id}
+                  />
+                </div>)}
+            </Form.Item>
+            <Form.Item>
+              {getFieldDecorator('ewhaian_id', {
+                rules: [{ required: true, message: '이화이언 아이디를 입력해주세요!' }],
+              })(
+                <div className="form-group">
+                  <label>이화이언 아이디</label>
+                  <input type="text"
+                    className="form-control"
+                    onChange={this.onChangeEwhaian_id}
                   />
                 </div>)}
             </Form.Item>
