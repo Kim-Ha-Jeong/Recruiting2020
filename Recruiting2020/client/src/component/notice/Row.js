@@ -37,7 +37,7 @@ class Row extends Component {
   }
 
   componentDidMount() {
-    if (window.location.pathname === '/notice') {
+    if (window.location.hash === '#/notice') {
       axios.get('/apiServer/notice')
         .then(response => {
           this.setState({ result: response.data });
@@ -47,7 +47,7 @@ class Row extends Component {
         })
       var boldChange = document.getElementById('noticeLink');
       boldChange.style.fontWeight = 'bold';
-    } else if(window.location.pathname === '/FAQ') {
+    } else if(window.location.hash === '#/FAQ') {
       axios.get('/apiServer/FAQ')
         .then(response => {
           this.setState({ result: response.data });
@@ -61,15 +61,15 @@ class Row extends Component {
   }
 
   selectExtra() {
-    if(window.location.pathname === '/#/notice'){
+    if(window.location.hash === '#/notice'){
       return(noticeExtra())
-    } else if(window.location.pathname === '/#/FAQ'){
+    } else if(window.location.hash === '#/FAQ'){
       return(FAQExtra())
     }
   }
 
   selectSpan(){
-    if(window.location.pathname === '/#/FAQ'){
+    if(window.location.hash === '#/FAQ'){
       return <span style={{margin: "0 10px 0 2.5px",color:"#EC1468"}}>A</span>
     }
   }
