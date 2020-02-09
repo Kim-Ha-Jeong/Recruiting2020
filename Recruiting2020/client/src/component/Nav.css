@@ -105,13 +105,16 @@ a {
 /* 모바일 조정 */
 @media(max-width:720px){
     .logo{
-        height: 30px;
+        height: 40px;
     }
     .ant-row{
         margin: 3% 0;
     }
     #computer{
         display: none;
+    }
+    #menu-icon{
+        vertical-align: 0em !important;
     }
 }
 

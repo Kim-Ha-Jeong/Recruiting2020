@@ -36,6 +36,9 @@
     #wrapper{
         margin-top: 30%;
     }
+    .result-container{
+        margin: 2% 12% !important;
+    }
 }
 
 /* Result.js 적용 */
