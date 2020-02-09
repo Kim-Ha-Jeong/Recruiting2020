@@ -30,7 +30,7 @@ class App extends Component{
           <Route path="/noticeManager/create" component={Create} />
           <Route path="/result" component={Find} exact={true} />
           <Route path="/result/:key" component={Result} />
-          <Route path="/result/undefine" component={Undefine} />
+          <Route path="/undefine" component={Undefine} />
           <Route path="/research1" component={Research1} />
           <Route path="/research2" component={Research2} />
         </div>
