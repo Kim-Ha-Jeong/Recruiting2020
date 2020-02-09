@@ -51,7 +51,13 @@ class Find extends Component {
       .then(res => this.state.result.map((x, i) => this.setState({
         key: x.key
       })))
-      .then(res => this.props.history.push('/result/' + this.state.key));
+      .then(res => {
+        if(this.state.key === undefined){
+          this.props.history.push('/result/undefine')
+        } else {
+          this.props.history.push('/result/' + this.state.key)
+        }
+      })
       } else {
         message.error("성명,학번 둘 다 정확히 입력했는지 확인해주세요!")
       }
