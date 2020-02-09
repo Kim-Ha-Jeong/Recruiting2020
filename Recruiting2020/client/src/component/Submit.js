@@ -19,10 +19,12 @@ class Demo extends React.Component {
     this.state = {
       selectedFile: null,
       name: '',
-      student_id: ''
+      student_id: '',
+      ewhaian_id: ''
     }
     this.onChangeName = this.onChangeName.bind(this);
     this.onChangeStudent_id = this.onChangeStudent_id.bind(this);
+    this.onChangeEwhaian_id = this.onChangeEwhaian_id.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   };
 
@@ -35,6 +37,12 @@ class Demo extends React.Component {
   onChangeStudent_id(e) {
     this.setState({
       student_id: e.target.value
+    })
+  }
+
+  onChangeEwhaian_id(e) {
+    this.setState({
+      ewhaian_id: e.target.value
     })
   }
 
@@ -58,7 +66,8 @@ class Demo extends React.Component {
         message.success(`지원서가 성공적으로 제출되었습니다!`);
         const obj = {
           name: this.state.name,
-          student_id: this.state.student_id
+          student_id: this.state.student_id,
+          ewhaian_id: this.state.ewhaian_id
         };
         axios.post('/apiServer/result/add/', obj)
           .then(res => console.log(res.data));
@@ -66,7 +75,8 @@ class Demo extends React.Component {
         this.setState({
           name: '',
           student_id: '',
-          selectedFile: ''
+          selectedFile: '',
+          ewhaian_id: ''
         })
       } else {
         message.error("지원서를 제출하지 못했습니다!")
@@ -112,6 +122,19 @@ class Demo extends React.Component {
                   className="form-control"
                   value={this.state.student_id}
                   onChange={this.onChangeStudent_id}
+                />
+              </div>)}
+            </Form.Item>
+            <Form.Item>
+            {getFieldDecorator('ewhaian_id', {
+            rules: [{ required: true, message: '이화이언 아이디를 입력해주세요!' }],
+          })(
+            <div className="form-group">
+                <label className="submit-label">이화이언 아이디</label>
+                <input type="text"
+                  className="form-control"
+                  value={this.state.ewhaian_id}
+                  onChange={this.onChangeEwhaian_id}
                 />
               </div>)}
             </Form.Item>
