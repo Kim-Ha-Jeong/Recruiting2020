@@ -63,7 +63,7 @@ class Header extends Component {
               visible={this.state.visible}
               onVisibleChange={this.handleVisibleChange}
             >
-              <Icon type="menu" />
+              <Icon id="menu-icon" type="menu" />
             </Popover>
           </Col>
         </Row>
