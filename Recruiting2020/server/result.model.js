@@ -10,6 +10,9 @@ let Result = new Schema({
   student_id: {
     type: String
   },
+  ewhaian_id: {
+    type: String
+  },
   pass: {
     type: String
   }
