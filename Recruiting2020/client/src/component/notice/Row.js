@@ -61,15 +61,15 @@ class Row extends Component {
   }
 
   selectExtra() {
-    if(window.location.pathname === '/notice'){
+    if(window.location.pathname === '/#/notice'){
       return(noticeExtra())
-    } else if(window.location.pathname === '/FAQ'){
+    } else if(window.location.pathname === '/#/FAQ'){
       return(FAQExtra())
     }
   }
 
   selectSpan(){
-    if(window.location.pathname === '/FAQ'){
+    if(window.location.pathname === '/#/FAQ'){
       return <span style={{margin: "0 10px 0 2.5px",color:"#EC1468"}}>A</span>
     }
   }

@@ -22,7 +22,7 @@ class App extends Component{
         <div>
           <About></About>
           <Route path="/" component={Home} exact={true} />
-          <Route path="/notice" component={Notice} />
+          <Route path="/notice" component={Notice} exact={true} />
           <Route path="/submit" component={Submit} />
           <Route path="/FAQ" component={Notice} />
           <Route path='/noticeManager/edit/:id' component={Edit} />
