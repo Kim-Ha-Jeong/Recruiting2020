@@ -8,11 +8,7 @@ class Row extends Component {
         this.delete = this.delete.bind(this);
     }
     delete() {
-<<<<<<< HEAD
-        axios.get('http://localhost:4000/notice/delete/'+this.props.obj._id)
-=======
         axios.get('/apiServer/notice/delete/'+this.props.obj._id)
->>>>>>> 393c40bba901bd8f15bb795995c62775bce42ba8
             .then(console.log('Deleted'))
             .catch(err => console.log(err))
     }

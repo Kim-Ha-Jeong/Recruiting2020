@@ -281,11 +281,7 @@ export default class Research1 extends Component {
             q18: this.state.q18
         }
 
-<<<<<<< HEAD
-        axios.post('http://localhost:4000/research/add', research1)
-=======
         axios.post('/apiServer/research/add', research1)
->>>>>>> 393c40bba901bd8f15bb795995c62775bce42ba8
             .then(res => console.log(res.data));
 
         this.setState({
