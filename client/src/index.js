@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+import "antd/dist/antd.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById("root")
+=======
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter } from 'react-router-dom';
@@ -13,6 +28,7 @@ ReactDOM.render(
         <App />
     </HashRouter>,
     document.getElementById('root')
+>>>>>>> 393c40bba901bd8f15bb795995c62775bce42ba8
 );
 
 // If you want your app to work offline and load faster, you can change

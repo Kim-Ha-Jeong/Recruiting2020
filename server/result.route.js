@@ -26,20 +26,34 @@ resultRoutes.get("/",function (req, res) {
   });
 });
 
+<<<<<<< HEAD
+resultRoutes.route('/find/:student_id/:name').post(function (req, res) {
+  let id = req.params.student_id;
+  let qname = req.params.name;
+  Result.find({student_id:id, name: qname}, function (err, result){
+=======
 resultRoutes.route('/find/:student_id/:name/:ewhaian_id').post(function (req, res) {
   let id = req.params.student_id;
   let qname = req.params.name;
   let ename = req.params.ewhaian_id;
   Result.find({student_id:id, name: qname, ewhaian_id: ename}, function (err, result){
+>>>>>>> 393c40bba901bd8f15bb795995c62775bce42ba8
       res.json(result);
   });
 });
 
+<<<<<<< HEAD
+resultRoutes.route('/find/:student_id/:name').get(function (req, res) {
+  let id = req.params.student_id;
+  let qname = req.params.name;
+  Result.find({student_id:id, name: qname}, function (err, result){
+=======
 resultRoutes.route('/find/:student_id/:name/:ewhaian_id').get(function (req, res) {
   let id = req.params.student_id;
   let qname = req.params.name;
   let ename = req.params.ewhaian_id;
   Result.find({student_id:id, name: qname, ewhaian_id: ename}, function (err, result){
+>>>>>>> 393c40bba901bd8f15bb795995c62775bce42ba8
       res.json(result);
   });
 });

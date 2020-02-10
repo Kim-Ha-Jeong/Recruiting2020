@@ -3,7 +3,11 @@ import axios from 'axios';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import 'antd/dist/antd.css';
 import { Row, Col, Icon, Popover, Button } from 'antd';
+<<<<<<< HEAD
+import logo from '../logo.jpg';
+=======
 import logo from '../logo.png';
+>>>>>>> 393c40bba901bd8f15bb795995c62775bce42ba8
 import './Nav.css';
 import Nav from './Nav';
 
@@ -24,14 +28,22 @@ class Header extends Component {
       visible: false,
     });
   };
+<<<<<<< HEAD
+
+=======
   
+>>>>>>> 393c40bba901bd8f15bb795995c62775bce42ba8
   handleVisibleChange = visible => {
     this.setState({ visible });
   };
 
   downloadHandler = () => {
     axios({
+<<<<<<< HEAD
+      url: 'http://localhost:4000/download/ewhaian_application_37.docx',
+=======
       url: '/apiServer/download/ewhaian_application_37.docx',
+>>>>>>> 393c40bba901bd8f15bb795995c62775bce42ba8
       method: 'GET',
       responseType: 'blob', // important
     }).then((response) => {
@@ -63,7 +75,11 @@ class Header extends Component {
               visible={this.state.visible}
               onVisibleChange={this.handleVisibleChange}
             >
+<<<<<<< HEAD
+              <Icon type="menu" />
+=======
               <Icon id="menu-icon" type="menu" />
+>>>>>>> 393c40bba901bd8f15bb795995c62775bce42ba8
             </Popover>
           </Col>
         </Row>

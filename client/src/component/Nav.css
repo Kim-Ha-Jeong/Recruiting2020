@@ -8,7 +8,11 @@
 
 /* 로고 */
 .logo{
+<<<<<<< HEAD
+    width: 100%;
+=======
     width: 110%;
+>>>>>>> 393c40bba901bd8f15bb795995c62775bce42ba8
     height: 48px;
 }
 
@@ -104,19 +108,32 @@ a {
 
 /* 모바일 조정 */
 @media(max-width:720px){
+<<<<<<< HEAD
+    .logo{
+        height: 30px;
+    }
+=======
+>>>>>>> 393c40bba901bd8f15bb795995c62775bce42ba8
     .ant-row{
         margin: 3% 0;
     }
     #computer{
         display: none;
     }
+<<<<<<< HEAD
+=======
     #menu-icon{
         vertical-align: -0.5em !important;
     }
+>>>>>>> 393c40bba901bd8f15bb795995c62775bce42ba8
 }
 
 @media(min-width:720px){
     #mobile{
         display: none;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 393c40bba901bd8f15bb795995c62775bce42ba8
