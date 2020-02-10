@@ -19,19 +19,12 @@ class Demo extends React.Component {
     this.state = {
       selectedFile: null,
       name: '',
-<<<<<<< HEAD
-      student_id: ''
-    }
-    this.onChangeName = this.onChangeName.bind(this);
-    this.onChangeStudent_id = this.onChangeStudent_id.bind(this);
-=======
       student_id: '',
       ewhaian_id: ''
     }
     this.onChangeName = this.onChangeName.bind(this);
     this.onChangeStudent_id = this.onChangeStudent_id.bind(this);
     this.onChangeEwhaian_id = this.onChangeEwhaian_id.bind(this);
->>>>>>> 393c40bba901bd8f15bb795995c62775bce42ba8
     this.handleSubmit = this.handleSubmit.bind(this);
   };
 
@@ -47,15 +40,12 @@ class Demo extends React.Component {
     })
   }
 
-<<<<<<< HEAD
-=======
   onChangeEwhaian_id(e) {
     this.setState({
       ewhaian_id: e.target.value
     })
   }
 
->>>>>>> 393c40bba901bd8f15bb795995c62775bce42ba8
   onChangeHandler = e => {
     var file = e.file;
     console.log(file);
@@ -76,30 +66,19 @@ class Demo extends React.Component {
         message.success(`지원서가 성공적으로 제출되었습니다!`);
         const obj = {
           name: this.state.name,
-<<<<<<< HEAD
-          student_id: this.state.student_id
-        };
-        axios.post('http://localhost:4000/result/add/', obj)
-=======
           student_id: this.state.student_id,
           ewhaian_id: this.state.ewhaian_id
         };
         axios.post('/apiServer/result/add/', obj)
->>>>>>> 393c40bba901bd8f15bb795995c62775bce42ba8
           .then(res => console.log(res.data));
     
         this.setState({
           name: '',
           student_id: '',
-<<<<<<< HEAD
-          selectedFile: ''
-        })
-=======
           selectedFile: '',
           ewhaian_id: ''
         })
         this.props.history.push('/complete');
->>>>>>> 393c40bba901bd8f15bb795995c62775bce42ba8
       } else {
         message.error("지원서를 제출하지 못했습니다!")
       }
@@ -148,8 +127,6 @@ class Demo extends React.Component {
               </div>)}
             </Form.Item>
             <Form.Item>
-<<<<<<< HEAD
-=======
             {getFieldDecorator('ewhaian_id', {
             rules: [{ required: true, message: '이화이언 아이디를 입력해주세요!' }],
           })(
@@ -163,7 +140,6 @@ class Demo extends React.Component {
               </div>)}
             </Form.Item>
             <Form.Item>
->>>>>>> 393c40bba901bd8f15bb795995c62775bce42ba8
               <label className="submit-label">지원서 제출</label>
               {getFieldDecorator('file', {
                 rules: [{ required: true, message: '지원서를 제출해주세요!' }],
@@ -171,11 +147,7 @@ class Demo extends React.Component {
                 valuePropName: 'fileList',
                 getValueFromEvent: this.onChangeHandler,
               })(
-<<<<<<< HEAD
-                <Upload.Dragger name="file" action="http://localhost:4000/upload" onRemove="true">
-=======
                 <Upload.Dragger name="file" action="/apiServer/upload" onRemove="true">
->>>>>>> 393c40bba901bd8f15bb795995c62775bce42ba8
                   <p className="ant-upload-drag-icon">
                     <Icon type="plus-circle" />
                   </p>
