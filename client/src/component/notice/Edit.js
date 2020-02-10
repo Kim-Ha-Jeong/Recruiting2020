@@ -18,7 +18,11 @@ export default class Edit extends Component {
   }
 
   componentDidMount() {
+<<<<<<< HEAD
       axios.get('http://localhost:4000/notice/edit/'+this.props.match.params.id)
+=======
+      axios.get('/apiServer/notice/edit/'+this.props.match.params.id)
+>>>>>>> 393c40bba901bd8f15bb795995c62775bce42ba8
           .then(response => {
               this.setState({ 
                 num: response.data.num, 
@@ -53,7 +57,11 @@ export default class Edit extends Component {
       title: this.state.title,
       desc: this.state.desc
     };
+<<<<<<< HEAD
     axios.post('http://localhost:4000/notice/update/'+this.props.match.params.id, obj)
+=======
+    axios.post('/apiServer/notice/update/'+this.props.match.params.id, obj)
+>>>>>>> 393c40bba901bd8f15bb795995c62775bce42ba8
         .then(res => console.log(res.data));
     
     this.props.history.push('/noticeManager');

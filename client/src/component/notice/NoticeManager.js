@@ -11,7 +11,11 @@ export default class Index extends Component {
     };
   }
   componentDidMount() {
+<<<<<<< HEAD
     axios.get('http://localhost:4000/notice')
+=======
+    axios.get('/apiServer/notice')
+>>>>>>> 393c40bba901bd8f15bb795995c62775bce42ba8
       .then(response => {
         this.setState({ result: response.data });
       })

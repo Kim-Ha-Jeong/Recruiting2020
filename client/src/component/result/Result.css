@@ -34,7 +34,14 @@
         font-size: 1.4rem;
     }
     #wrapper{
+<<<<<<< HEAD
         margin-top: 30%;
+=======
+        margin-top: 15%;
+    }
+    .result-container{
+        margin: 2% 12% !important;
+>>>>>>> 393c40bba901bd8f15bb795995c62775bce42ba8
     }
 }
 

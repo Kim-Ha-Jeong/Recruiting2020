@@ -14,7 +14,11 @@ export default class Pass extends Component {
   }
 
   componentDidMount() {
+<<<<<<< HEAD
     axios.get('http://localhost:4000/result/' + this.props.match.params.key)
+=======
+    axios.get('/apiServer/result/' + this.props.match.params.key)
+>>>>>>> 393c40bba901bd8f15bb795995c62775bce42ba8
       .then((res) => this.setState({
         result: res.data
       }))
