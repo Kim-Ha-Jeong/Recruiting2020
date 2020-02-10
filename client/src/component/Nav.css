@@ -104,9 +104,6 @@ a {
 
 /* 모바일 조정 */
 @media(max-width:720px){
-    .logo{
-        height: 40px;
-    }
     .ant-row{
         margin: 3% 0;
     }
