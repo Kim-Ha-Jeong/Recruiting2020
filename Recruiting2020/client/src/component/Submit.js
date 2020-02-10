@@ -78,6 +78,7 @@ class Demo extends React.Component {
           selectedFile: '',
           ewhaian_id: ''
         })
+        this.props.history.push('/complete');
       } else {
         message.error("지원서를 제출하지 못했습니다!")
       }
