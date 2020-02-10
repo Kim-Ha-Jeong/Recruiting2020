@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import About from './component/About';
-import Home from './component/Home';
 import NoticeManager from './component/notice/NoticeManager';
 import Submit from './component/Submit';
 import Complete from './component/Complete';
@@ -21,7 +20,7 @@ class App extends Component{
       <div>
         <Header></Header>
         <div>
-          <Route path="/" component={Home} exact={true} />
+          <Route path="/" component={About} exact={true} />
           <Route path="/notice" component={Notice} exact={true} />
           <Route path="/submit" component={Submit} />
           <Route path="/complete" component={Complete} />
@@ -36,6 +35,7 @@ class App extends Component{
           <Route path="/research2" component={Research2} />
         </div>
       </div>
+
     )
   }
 }

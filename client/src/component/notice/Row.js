@@ -47,6 +47,7 @@ class Row extends Component {
         })
       var boldChange = document.getElementById('noticeLink');
       boldChange.style.fontWeight = 'bold';
+
     } else if(window.location.hash === '#/FAQ') {
       axios.get('/apiServer/FAQ')
         .then(response => {

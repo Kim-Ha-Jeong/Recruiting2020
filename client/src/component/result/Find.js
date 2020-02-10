@@ -43,8 +43,8 @@ class Find extends Component {
   onSubmit(e) {
     e.preventDefault();
     this.props.form.validateFields((err, values) =>{
-      if(!err){
-        axios.post('/apiServer/result/find/' + this.state.student_id + "/" + this.state.name + "/" + this.state.ewhaian_id)
+      if(!err) {
+      axios.post('/apiServer/result/find/' + this.state.student_id + "/" + this.state.name + "/" + this.state.ewhaian_id)
       .then((res) => this.setState({
         result: res.data
       }))
@@ -59,7 +59,7 @@ class Find extends Component {
         }
       })
       } else {
-        message.error("성명,학번 둘 다 정확히 입력했는지 확인해주세요!")
+        message.error("성명,학번,아이디 모두 정확히 입력했는지 확인해주세요!")
       }
     })
     

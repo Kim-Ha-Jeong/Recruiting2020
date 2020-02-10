@@ -19,7 +19,7 @@ export default class Edit extends Component {
 
   componentDidMount() {
       axios.get('/apiServer/notice/edit/'+this.props.match.params.id)
-          .then(response => {
+        .then(response => {
               this.setState({ 
                 num: response.data.num, 
                 title: response.data.title,
@@ -53,6 +53,7 @@ export default class Edit extends Component {
       title: this.state.title,
       desc: this.state.desc
     };
+
     axios.post('/apiServer/notice/update/'+this.props.match.params.id, obj)
         .then(res => console.log(res.data));
     

@@ -24,7 +24,7 @@ class Header extends Component {
       visible: false,
     });
   };
-  
+
   handleVisibleChange = visible => {
     this.setState({ visible });
   };
