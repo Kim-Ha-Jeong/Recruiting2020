@@ -31,20 +31,18 @@ export default class Pass extends Component {
   }
 
   selectButton() {
-    return (this.state.result.map((object, i) =>  {
-      console.log(object.team)
-      console.log(object.pass)
+    return (this.state.result.map((object, i) => {
       if (object.team === "디자인팀" && object.pass === "합격") {
-        return <Button shape="round" id="probation-design">
-        <Link to="/probationDesign">수습 과제 안내 페이지 바로 가기</Link>
-      </Button>
+        return <Button shape="round" id="probation-design" className="probation-button">
+          <Link to="/probationDesign">수습 과제 안내 페이지 바로 가기</Link>
+        </Button>
       } else if (object.team === "컨텐츠팀" && object.pass === "합격") {
-        return <Button shape="round" id="probation-content">
-        <Link to="/probationContent">수습 과제 안내 페이지 바로 가기</Link>
-      </Button>
-      } 
+        return <Button shape="round" id="probation-content" className="probation-button">
+          <Link to="/probationContent">수습 과제 안내 페이지 바로 가기</Link>
+        </Button>
+      }
     })
-	)
+    )
   }
 
   render() {
