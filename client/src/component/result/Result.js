@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Row } from 'antd';
+import { Link } from 'react-router-dom';
+import { Row,Button } from 'antd';
 import TableRow from './Row';
 import './Result.css'
 
@@ -21,6 +22,20 @@ export default class Pass extends Component {
       .catch(function (error) {
         console.log(error);
       });
+
+    var showDesign = document.getElementById('probation-design');
+    showDesign.style.display = 'none';
+    var showContent = document.getElementById('probation-content');
+    showContent.style.display = 'none';
+
+    this.state.result.map(function(object,i){
+      if(object.team === "디자인팀" && object.pass === "합격"){
+        showDesign.style.display = 'inline-block';
+      } else if(object.team === "컨텐츠팀" && object.pass === "합격"){
+        showContent.style.display = "inline-block";
+      }
+    })
+
   }
 
   tabRow() {
@@ -52,6 +67,12 @@ export default class Pass extends Component {
               {this.tabRow()}
             </tbody>
           </table>
+          <Button shape="round" id="probation-design">
+            <Link to="/probationDesign">수습 과제 안내 페이지 바로 가기</Link>
+          </Button>
+          <Button shape="round" id="probation-content">
+            <Link to="/probationContent">수습 과제 안내 페이지 바로 가기</Link>
+          </Button>
         </div>
       </div>
     );
