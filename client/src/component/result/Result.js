@@ -32,8 +32,8 @@ export default class Pass extends Component {
 
   selectButton() {
     return this.state.result.map(function (object, i) {
-      console.log(object.team)
-      console.log(object.pass)
+      console.log(this.object.props.team)
+      console.log(this.object.props.pass)
       if (object.team === "디자인팀" && object.pass === "합격") {
         return <Button shape="round" id="probation-design">
         <Link to="/probationDesign">수습 과제 안내 페이지 바로 가기</Link>
