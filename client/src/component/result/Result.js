@@ -31,7 +31,7 @@ export default class Pass extends Component {
   }
 
   selectButton() {
-    return this.state.result.map(function (object, i) {
+    return (this.state.result.map((object, i) =>  {
       console.log(object.team)
       console.log(object.pass)
       if (object.team === "디자인팀" && object.pass === "합격") {
@@ -43,7 +43,8 @@ export default class Pass extends Component {
         <Link to="/probationContent">수습 과제 안내 페이지 바로 가기</Link>
       </Button>
       } 
-    });
+    })
+	)
   }
 
   render() {
