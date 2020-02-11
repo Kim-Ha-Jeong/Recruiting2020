@@ -93,3 +93,9 @@ table th:last-child{
     color : white;
     border-color :  #EC1468;
 }
+
+.probation-button:hover,.probation-button:active{
+    background-color : white;
+    color: #EC1468;
+    border-color: #EC1468;
+}
