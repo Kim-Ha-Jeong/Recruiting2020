@@ -24,15 +24,16 @@ export default class Pass extends Component {
       });
 
     var showDesign = document.getElementById('probation-design');
-    showDesign.style.display = 'none';
     var showContent = document.getElementById('probation-content');
-    showContent.style.display = 'none';
 
     this.state.result.map(function(object,i){
       if(object.team === "디자인팀" && object.pass === "합격"){
         showDesign.style.display = 'inline-block';
       } else if(object.team === "컨텐츠팀" && object.pass === "합격"){
         showContent.style.display = "inline-block";
+      } else {
+        showDesign.style.display = 'none';
+        showContent.style.display = 'none';
       }
     })
 
