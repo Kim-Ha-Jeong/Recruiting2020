@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import { Row,Button } from 'antd';
+import { Row, Button } from 'antd';
 import TableRow from './Row';
 import './Result.css'
 
@@ -22,28 +22,27 @@ export default class Pass extends Component {
       .catch(function (error) {
         console.log(error);
       });
-
-    var showDesign = document.getElementById('probation-design');
-    var showContent = document.getElementById('probation-content');
-    
-    this.state.result.map(function(object,i){
-      console.log(object.team)
-      console.log(object.pass)
-      if(object.team === "디자인팀" && object.pass === "합격"){
-        showDesign.style.display = 'inline-block';
-      } else if(object.team === "컨텐츠팀" && object.pass === "합격"){
-        showContent.style.display = "inline-block";
-      } else {
-        showDesign.style.display = 'none';
-        showContent.style.display = 'none';
-      }
-    })
-
   }
 
   tabRow() {
     return this.state.result.map(function (object, i) {
       return <TableRow obj={object} key={i} />;
+    });
+  }
+
+  selectButton() {
+    return this.state.result.map(function (object, i) {
+      console.log(object.team)
+      console.log(object.pass)
+      if (object.team === "디자인팀" && object.pass === "합격") {
+        return <Button shape="round" id="probation-design">
+        <Link to="/probationDesign">수습 과제 안내 페이지 바로 가기</Link>
+      </Button>
+      } else if (object.team === "컨텐츠팀" && object.pass === "합격") {
+        return <Button shape="round" id="probation-content">
+        <Link to="/probationContent">수습 과제 안내 페이지 바로 가기</Link>
+      </Button>
+      } 
     });
   }
 
@@ -70,12 +69,7 @@ export default class Pass extends Component {
               {this.tabRow()}
             </tbody>
           </table>
-          <Button shape="round" id="probation-design">
-            <Link to="/probationDesign">수습 과제 안내 페이지 바로 가기</Link>
-          </Button>
-          <Button shape="round" id="probation-content">
-            <Link to="/probationContent">수습 과제 안내 페이지 바로 가기</Link>
-          </Button>
+          {this.selectButton()}
         </div>
       </div>
     );
