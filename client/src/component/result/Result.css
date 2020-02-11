@@ -87,3 +87,9 @@ table th:last-child{
     font-weight: lighter;
     border: 0.35px solid white;
 }
+
+.probation-button{
+    background-color : #EC1468;
+    color : white;
+    border-color :  #EC1468;
+}
