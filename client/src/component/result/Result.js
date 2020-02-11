@@ -25,6 +25,11 @@ export default class Pass extends Component {
 
     var showDesign = document.getElementById('probation-design');
     var showContent = document.getElementById('probation-content');
+    
+    this.state.result.map(function(object,i){
+      console.log(object.team)
+      console.log(object.pass)
+    }
 
     this.state.result.map(function(object,i){
       if(object.team === "디자인팀" && object.pass === "합격"){
