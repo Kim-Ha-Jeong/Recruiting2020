@@ -106,7 +106,8 @@ class Design extends Component {
                 getValueFromEvent: this.onChangeHandler,
               })(
                 <Upload.Dragger name="file" action="/apiServer/upload" onRemove={file => {
-                  console.log(file.name);
+                  axios.post('/apiServer/delete'+file.name)
+                    .then(res => console.log("delete"));
                   return true;
                 }}>
                   <p className="ant-upload-drag-icon">
