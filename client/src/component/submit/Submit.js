@@ -1,7 +1,7 @@
 
 import React from 'react';
 import 'antd/dist/antd.css';
-import '../index.css';
+import '../../index.css';
 import {
   Form,
   Button,
@@ -13,7 +13,7 @@ import {
 import axios from 'axios';
 import './Submit.css';
 
-class Demo extends React.Component {
+class Submit extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -156,11 +156,10 @@ class Demo extends React.Component {
                 </Upload.Dragger>,
               )}
             </Form.Item>
-
             <Form.Item wrapperCol={{ span: 4, offset: 10 }}>
               <Button id="submit-button" htmlType="submit">
                 제출하기
-          </Button>
+             </Button>
             </Form.Item>
           </Form>
         </div>
@@ -170,4 +169,4 @@ class Demo extends React.Component {
 }
 
 
-export default Form.create()(Demo);
+export default Form.create()(Submit);

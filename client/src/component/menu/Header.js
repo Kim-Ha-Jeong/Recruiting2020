@@ -3,7 +3,7 @@ import axios from 'axios';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import 'antd/dist/antd.css';
 import { Row, Col, Icon, Popover, Button } from 'antd';
-import logo from '../logo.png';
+import logo from '../../logo.png';
 import './Nav.css';
 import Nav from './Nav';
 

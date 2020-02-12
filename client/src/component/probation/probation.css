@@ -1,0 +1,43 @@
+.probation-container{
+    margin : 3% 25%;
+    font-size: 14px;
+}
+
+@media(max-width:720px){
+    .probation-container{
+        margin : 2% 12%;
+    }
+    .forMobile{
+        display :inline-block !important;
+    }
+    #content-wrapper{
+        margin-top: 15%;
+    }
+    #design-wrapper{
+        margin-top: 15%;
+    }
+}
+
+.forMobile{
+    display: none;
+}
+
+.emphasize{
+    font-weight: bold;
+}
+
+#probation-add{
+    margin-top: 3%;
+    font-weight: lighter;
+    font-size: 12px;
+}
+
+#content-wrapper{
+    text-align:center;
+    margin-top : 5%;
+}
+
+#design-wrapper{
+    text-align: center;
+    margin-top : 7%;
+}

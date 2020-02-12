@@ -34,11 +34,11 @@ export default class Pass extends Component {
     return (this.state.result.map((object, i) => {
       if (object.team === "디자인팀" && object.pass === "합격") {
         return <Button shape="round" id="probation-design" className="probation-button">
-          <Link to="/probationDesign">수습 과제 안내 페이지 바로 가기</Link>
+          <Link to="/probationDesign">사전 과제 안내 페이지 바로 가기</Link>
         </Button>
       } else if (object.team === "컨텐츠팀" && object.pass === "합격") {
         return <Button shape="round" id="probation-content" className="probation-button">
-          <Link to="/probationContent">수습 과제 안내 페이지 바로 가기</Link>
+          <Link to="/probationContent">사전 과제 안내 페이지 바로 가기</Link>
         </Button>
       }
     })
@@ -54,7 +54,7 @@ export default class Pass extends Component {
         <hr />
         <div className="result-container">
           <h4 align="center" id="result-title">합격 / 불합격 문구</h4>
-          <p align="center">추가 문구 및 안내사항</p>
+          <p id="add" align="center">추가 문구 및 안내사항</p>
           <table id="result-table">
             <thead id="result-thead">
               <tr>
@@ -68,7 +68,9 @@ export default class Pass extends Component {
               {this.tabRow()}
             </tbody>
           </table>
-          {this.selectButton()}
+          <div id="probation-wrapper">
+            {this.selectButton()}
+          </div>
         </div>
       </div>
     );

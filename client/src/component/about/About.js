@@ -24,8 +24,7 @@ const tabListNoTitle = [
 const contentListNoTitle = {
   title1: <p>이화이언 소개</p>,
   title2: (
-    <p>
-      <div class="introduce-team">
+      <div className="introduce-team">
         <Row gutter={16}>
           <Col span={6}>
             <Card title="CONTENTS" bordered={false}>
@@ -49,7 +48,6 @@ const contentListNoTitle = {
           </Col>
         </Row>
       </div>
-    </p>
   ),
   title3: <p>OB 소감</p>
 };
@@ -88,7 +86,6 @@ class About extends Component {
           style={{ width: "100%" }}
           tabList={tabListNoTitle}
           activeTabKey={this.state.noTitleKey}
-          tabBarExtraContent={<a href="#">More</a>}
           onTabChange={key => {
             this.onTabChange(key, "noTitleKey");
           }}
