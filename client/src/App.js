@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import About from './component/About';
+import About from './component/about/About';
 import NoticeManager from './component/notice/NoticeManager';
-import Submit from './component/Submit';
-import Complete from './component/Complete';
-import Header from './component/Header';
+import Submit from './component/submit/Submit';
+import Complete from './component/submit/Complete';
+import Header from './component/menu/Header';
 import Notice from './component/notice/Notice';
 import Edit from './component/notice/Edit'
 import Create from './component/notice/Create';
 import Find from './component/result/Find';
 import Result from './component/result/Result';
-import Undefine from './component/result/Undefine';
+import Undefine from './component/submit/Undefine';
 import Research1 from './component/research/research1';
 import Research2 from './component/research/research2';
+import Probation from './component/probation/Probation';
 
 class App extends Component{
   render(){
@@ -33,6 +34,8 @@ class App extends Component{
           <Route path="/undefine" component={Undefine} />
           <Route path="/research1" component={Research1} />
           <Route path="/research2" component={Research2} />
+          <Route path="/probationDesign" component={Probation} />
+          <Route path="/probationContent" component={Probation} />
         </div>
       </div>
 

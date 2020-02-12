@@ -53,7 +53,7 @@
     margin-bottom: 3%;
 }
 
-p{
+p#add{
     color: #EC1468;
     margin-bottom: 3%;
 }
@@ -98,4 +98,8 @@ table th:last-child{
     background-color : white;
     color: #EC1468;
     border-color: #EC1468;
+}
+
+#probation-wrapper{
+    text-align: center!important;
 }

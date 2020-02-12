@@ -55,6 +55,7 @@ p.ant-upload-hint{
     color: #EC1468;
     border-color: rgba(236, 20, 104, .1);
     margin-top: 20%;
+    border-color : #EC1468;
 }
 
 #submit-button:hover{
