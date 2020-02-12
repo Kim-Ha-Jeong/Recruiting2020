@@ -11,7 +11,6 @@ const resultRoute = require('./result.route')
 const uploadRoute = require('./fileupload.route');
 const researchRoute = require('./research.route');
 const researchRoute2 = require('./research.route2');
-const deleteRoute = require('./filedelete');
 const path = require('path');
 
 mongoose.Promise = global.Promise;
@@ -30,7 +29,6 @@ app.use('/apiServer/result', resultRoute);
 app.use('/apiServer/upload', uploadRoute);
 app.use('/apiServer/research', researchRoute);
 app.use('/apiServer/research2', researchRoute2);
-app.use('/apiServer/delete', deleteRoute)
 
 app.use('/apiServer/download',express.static('download'));
 app.use('/apiServer/upload',express.static('uploads'));
