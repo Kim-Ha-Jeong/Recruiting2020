@@ -19,11 +19,6 @@ class Nav extends Component {
   render() {
     return (
       <Menu id={this.props.id} onClick={this.handleClick} selectedKeys={[this.state.current]} mode={this.props.mode}>
-        <Menu.Item key="intro">
-          <NavLink to="/" className="link">
-            소개
-          </NavLink>
-        </Menu.Item>
         <Menu.Item key="submit">
           <NavLink to="/submit" className="link">
             지원서 제출
