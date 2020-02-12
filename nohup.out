@@ -1,0 +1,40 @@
+npm ERR! code ENOENT
+npm ERR! syscall open
+npm ERR! path /var/www/Recruiting2020/package.json
+npm ERR! errno -2
+npm ERR! enoent ENOENT: no such file or directory, open '/var/www/Recruiting2020/package.json'
+npm ERR! enoent This is related to npm not being able to find a file.
+npm ERR! enoent 
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /root/.npm/_logs/2020-02-12T09_26_21_941Z-debug.log
+npm ERR! code ENOENT
+npm ERR! syscall open
+npm ERR! path /var/www/Recruiting2020/package.json
+npm ERR! errno -2
+npm ERR! enoent ENOENT: no such file or directory, open '/var/www/Recruiting2020/package.json'
+npm ERR! enoent This is related to npm not being able to find a file.
+npm ERR! enoent 
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /root/.npm/_logs/2020-02-12T09_26_33_668Z-debug.log
+npm ERR! code ENOENT
+npm ERR! syscall open
+npm ERR! path /var/www/Recruiting2020/package.json
+npm ERR! errno -2
+npm ERR! enoent ENOENT: no such file or directory, open '/var/www/Recruiting2020/package.json'
+npm ERR! enoent This is related to npm not being able to find a file.
+npm ERR! enoent 
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /root/.npm/_logs/2020-02-12T09_26_51_692Z-debug.log
+npm ERR! code ENOENT
+npm ERR! syscall open
+npm ERR! path /var/www/Recruiting2020/package.json
+npm ERR! errno -2
+npm ERR! enoent ENOENT: no such file or directory, open '/var/www/Recruiting2020/package.json'
+npm ERR! enoent This is related to npm not being able to find a file.
+npm ERR! enoent 
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /root/.npm/_logs/2020-02-12T09_27_06_741Z-debug.log
