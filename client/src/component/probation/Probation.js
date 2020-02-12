@@ -72,14 +72,12 @@ class Design extends Component {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
-        message.success(`지원서가 성공적으로 제출되었습니다!`);
         this.setState({
           selectedFile: '',
         })
-        this.props.history.push('/complete');
+        this.props.history.push('/success');
       } else {
-        message.error("사전과제를 제출하지 못했습니다!")
+        alert("사전과제를 제출하지 못했습니다!");
       }
     });
   };
@@ -108,7 +106,7 @@ class Design extends Component {
                 getValueFromEvent: this.onChangeHandler,
               })(
                 <Upload.Dragger name="file" action="/apiServer/upload" onRemove={file => {
-                  console.log(file.status);
+                  console.log(file.name);
                   return true;
                 }}>
                   <p className="ant-upload-drag-icon">
