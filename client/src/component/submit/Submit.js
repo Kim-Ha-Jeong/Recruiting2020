@@ -62,8 +62,6 @@ class Submit extends React.Component {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
-        message.success(`지원서가 성공적으로 제출되었습니다!`);
         const obj = {
           name: this.state.name,
           student_id: this.state.student_id,
@@ -78,7 +76,7 @@ class Submit extends React.Component {
           selectedFile: '',
           ewhaian_id: ''
         })
-        this.props.history.push('/complete');
+        this.props.history.push('/success');
       } else {
         message.error("지원서를 제출하지 못했습니다!")
       }

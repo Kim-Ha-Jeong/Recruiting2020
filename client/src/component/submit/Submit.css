@@ -81,6 +81,15 @@ p.ant-upload-hint{
     #submit-button{
         margin-top: 10%;
     }
+    .complete-container{
+        margin : 30% 12%!important;
+    }
+    .btn-wrapper{
+        margin-bottom: 10%!important;
+    }
+    #icon-wrapper{
+        margin-bottom: 10%!important;
+    }
 }
 
 .ant-upload-list-item:hover .ant-upload-list-item-info{
@@ -89,4 +98,16 @@ p.ant-upload-hint{
 
 .ant-upload-list-item-card-actions a:first-child{
     display: none;
+}
+
+.complete-container{
+    margin: 12% 25%;
+}
+
+.btn-wrapper{
+    margin-bottom: 5%;
+}
+
+#icon-wrapper{
+    margin-bottom: 5%;
 }
