@@ -80,7 +80,7 @@ class Find extends Component {
                 rules: [{ required: true, message: '성명을 입력해주세요!' }],
               })(
                 <div className="form-group">
-                  <label>성명</label>
+                  <label className="submit-label">성명</label>
                   <input
                     type="text"
                     className="form-control"
@@ -93,7 +93,7 @@ class Find extends Component {
                 rules: [{ required: true, message: '학번을 입력해주세요!' }],
               })(
                 <div className="form-group">
-                  <label>학번</label>
+                  <label className="submit-label">학번</label>
                   <input type="text"
                     className="form-control"
                     onChange={this.onChangeStudent_id}
@@ -105,7 +105,7 @@ class Find extends Component {
                 rules: [{ required: true, message: '이화이언 아이디를 입력해주세요!' }],
               })(
                 <div className="form-group">
-                  <label>이화이언 아이디</label>
+                  <label className="submit-label">이화이언 아이디</label>
                   <input type="text"
                     className="form-control"
                     onChange={this.onChangeEwhaian_id}
