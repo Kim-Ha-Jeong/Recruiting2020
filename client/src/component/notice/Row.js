@@ -75,17 +75,19 @@ class Row extends Component {
     }
   }
 
-
   panel() {
     return (
       this.state.result.map((obj, i) => {
-        const text= obj.desc;
-        const string = text.value.replace(/(\n|\r\n)/g, '<br>');
+	const text = obj.desc;
+        const re = '$$';
+        const result = text.split(re);
         return <Panel extra={this.selectExtra()} header={obj.title} key={obj.num}>
                 <div>
                   {this.selectSpan()}
-                  {string}
-                </div>
+	      	  {result[0]}<br/>
+		  {result[1]}<br/>
+		  {result[2]}
+		</div>
               </Panel>
       })
     )
