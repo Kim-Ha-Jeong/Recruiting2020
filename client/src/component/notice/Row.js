@@ -79,12 +79,10 @@ class Row extends Component {
   panel() {
     return (
       this.state.result.map((obj, i) => {
-        const text= obj.desc;
-        const string = text.value.replace(/(\n|\r\n)/g, '<br>');
         return <Panel extra={this.selectExtra()} header={obj.title} key={obj.num}>
                 <div>
                   {this.selectSpan()}
-                  {string}
+                  {obj.desc}
                 </div>
               </Panel>
       })
