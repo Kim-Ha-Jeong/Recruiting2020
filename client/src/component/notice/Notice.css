@@ -90,6 +90,6 @@ table th:last-child{
 /* 모바일 버전 조정 */
 @media(max-width:720px){
     .notice-container{
-        margin : 2% 12%;
+        margin : 2% -1%;
     }
 }
