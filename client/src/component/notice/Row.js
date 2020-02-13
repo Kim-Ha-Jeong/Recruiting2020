@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './Notice.css';
-import { Collapse,Icon } from 'antd';
+import { Collapse, Icon } from 'antd';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const { Panel } = Collapse;
@@ -48,7 +48,7 @@ class Row extends Component {
       var boldChange = document.getElementById('noticeLink');
       boldChange.style.fontWeight = 'bold';
 
-    } else if(window.location.hash === '#/FAQ') {
+    } else if (window.location.hash === '#/FAQ') {
       axios.get('/apiServer/FAQ')
         .then(response => {
           this.setState({ result: response.data });
@@ -62,29 +62,36 @@ class Row extends Component {
   }
 
   selectExtra() {
-    if(window.location.hash === '#/notice'){
-      return(noticeExtra())
-    } else if(window.location.hash === '#/FAQ'){
-      return(FAQExtra())
+    if (window.location.hash === '#/notice') {
+      return (noticeExtra())
+    } else if (window.location.hash === '#/FAQ') {
+      return (FAQExtra())
     }
   }
 
-  selectSpan(){
-    if(window.location.hash === '#/FAQ'){
-      return <span style={{margin: "0 10px 0 2.5px",color:"#EC1468"}}>A</span>
+  selectSpan() {
+    if (window.location.hash === '#/FAQ') {
+      return <span style={{ margin: "0 10px 0 2.5px", color: "#EC1468" }}>A</span>
     }
   }
-
 
   panel() {
     return (
       this.state.result.map((obj, i) => {
+        const text = obj.desc;
+        const re = '$$';
+        const result = text.split(re);
         return <Panel extra={this.selectExtra()} header={obj.title} key={obj.num}>
-                <div>
-                  {this.selectSpan()}
-                  {obj.desc}
-                </div>
-              </Panel>
+          <div>
+            {this.selectSpan()}
+            {result[0]}<br className="forMobile"/>
+            {result[1]}<br />
+            {result[2]}<br className="forMobile"/>
+            {result[3]}<br />
+            {result[4]}<br className="forMobile" />
+            {result[5]}
+          </div>
+        </Panel>
       })
     )
   }
