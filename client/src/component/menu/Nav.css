@@ -8,14 +8,16 @@
 
 /* 로고 */
 .logo{
-    width: 110%;
-    height: 48px;
+    width: 130%;
+    height: 40%;
 }
 
 /* 메뉴 */
 #menu{
     text-align:right;
     border-bottom: none;
+    font-size: 16px;
+    margin-top:2%;
 }
 
 /* 링크 밑줄 없애기 */
@@ -82,6 +84,7 @@ a {
 .btn-wrap{
     text-align: center;
     padding : 0.8% 0% 0.8% 2%;
+    margin-top: 0.8%;
 }
 
 
@@ -112,6 +115,10 @@ a {
     }
     #menu-icon{
         vertical-align: -0.5em !important;
+        margin-top: 28%;
+    }
+    .logo{
+        width:117%;
     }
 }
 

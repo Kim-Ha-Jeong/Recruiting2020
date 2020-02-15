@@ -1,16 +1,112 @@
+/* 슬라이드 */
 .ant-carousel .slick-slide {
   text-align: center;
-  height: 160px;
-  line-height: 160px;
+  height: 300px;
+  line-height: 280px;
   background: #364d79;
   overflow: hidden;
+  border-radius: 60px;
+  margin: 0 auto;
+  
 }
-
 .ant-carousel .slick-slide h3 {
   color: #fff;
+ 
 }
 
+.ant-carousel{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1.3%;
+}
+
+/* 팀 소개*/
 .introduce-team {
-  background: #ececec;
-  padding: 2%;
+  background-color: white;
+ }
+
+/* nav tab */
+.ant-tabs-nav {
+  display: table;
+  margin-left:auto;
+  margin-right:auto;  
+  color:black !important;
+  border-color : transparent;
+}
+
+.ant-tabs-nav .ant-tabs-tab:hover{
+  color:#EC1468;
+}
+
+.ant-tabs-tab-active{
+  color:#EC1468 !important;   
+}
+
+.ant-tabs-ink-bar{
+  background-color:#EC1468 !important;
+}
+
+/* 팀 소개 카드 */
+.ant-card-head-title {
+  text-align: center;
+ 
+  height :300px;
+  border-radius: 25px;
+}
+
+.ant-card-body{
+  text-align: center;
+  padding-left :10%;
+  padding-right :10%;
+}
+
+.ant-card-head{
+  border:0;
+ 
+}
+
+.contents{
+  background-color:#C3EAE3 !important;
+  border-radius: 30px;
+}
+
+.marketing{
+  background-color:#FFE8AE !important;
+  border-radius: 30px;
+}
+
+.design{
+  background-color:#DCCAE1 !important;
+  border-radius: 30px;
+}
+.web{
+  background-color:#EFEDAF !important;
+  border-radius: 30px;
+}
+
+/* 모바일 */
+
+@media(max-width:720px){
+  .contents{
+    margin-left: -8%;
+    margin-right: -382%;
+  }
+  .marketing{
+    margin-top: 642%;
+    margin-left: -133%;
+    margin-right: -257%;
+  }
+  .design{
+    margin-top: 1288%;
+    margin-left: -258%;
+    margin-right: -132%;;
+  }
+  .web{
+    margin-top: 1934%;
+    margin-left: -386%;
+    margin-right: -7%;
+  }
+  .ant-carousel{
+    margin-bottom:7%;
+  }
 }
