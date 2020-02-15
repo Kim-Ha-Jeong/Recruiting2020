@@ -16,6 +16,8 @@
 #menu{
     text-align:right;
     border-bottom: none;
+    font-size: 16px;
+    margin-top:2%;
 }
 
 /* 링크 밑줄 없애기 */
@@ -82,6 +84,7 @@ a {
 .btn-wrap{
     text-align: center;
     padding : 0.8% 0% 0.8% 2%;
+    margin-top: 0.8%;
 }
 
 
