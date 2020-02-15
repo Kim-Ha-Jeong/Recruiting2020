@@ -24,25 +24,25 @@ const tabListNoTitle = [
 const contentListNoTitle = {
   title1: <p>이화이언 소개</p>,
   title2: (
-      <div className="introduce-team">
+      <div >
         <Row gutter={16}>
           <Col span={6}>
-            <Card title="CONTENTS" bordered={false}>
+            <Card className="contents" title="CONTENTS" bordered={false}>
               Card content
             </Card>
           </Col>
           <Col span={6}>
-            <Card title="MARKETING" bordered={false}>
+            <Card className="marketing" title="MARKETING" bordered={false}>
               Card content
             </Card>
           </Col>
           <Col span={6}>
-            <Card title="DESIGN" bordered={false}>
+            <Card className="design" title="DESIGN" bordered={false}>
               Card content
             </Card>
           </Col>
           <Col span={6}>
-            <Card title="WEB" bordered={false}>
+            <Card className="web" title="WEB" bordered={false}>
               Card content
             </Card>
           </Col>
