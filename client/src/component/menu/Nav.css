@@ -3,11 +3,12 @@
     margin: 2% 12%;
 }
 #computer{
-    margin: 1% 12%!important;
+    margin: 1% 16%!important;
 }
 
 /* 로고 */
 .logo{
+    margin-top: 7%;
     width: 130%;
     height: 40%;
 }

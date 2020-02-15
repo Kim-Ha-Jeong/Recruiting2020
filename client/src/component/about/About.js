@@ -9,7 +9,7 @@ import "./About.css";
 const tabListNoTitle = [
   {
     key: "title1",
-    tab: "이화이언"
+    tab: "이화이언 소개"
   },
   {
     key: "title2",
@@ -26,22 +26,22 @@ const contentListNoTitle = {
   title2: (
       <div >
         <Row gutter={16}>
-          <Col span={6}>
+          <Col xs={24} lg={6} xl={6} span={6} className="card-wrapper">
             <Card className="contents" title="CONTENTS" bordered={false}>
               Card content
             </Card>
           </Col>
-          <Col span={6}>
+          <Col xs={24} lg={6} xl={6} span={6} className="card-wrapper">
             <Card className="marketing" title="MARKETING" bordered={false}>
               Card content
             </Card>
           </Col>
-          <Col span={6}>
+          <Col xs={24} lg={6} xl={6} span={6} className="card-wrapper">
             <Card className="design" title="DESIGN" bordered={false}>
               Card content
             </Card>
           </Col>
-          <Col span={6}>
+          <Col xs={24} lg={6} xl={6} span={6} className="card-wrapper">
             <Card className="web" title="WEB" bordered={false}>
               Card content
             </Card>
