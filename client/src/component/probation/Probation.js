@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form,Button,Upload,Icon,message,Row } from 'antd';
+import { Form,Button,Upload,Icon,Row } from 'antd';
 import './probation.css';
 import axios from 'axios';
 
