@@ -69,7 +69,7 @@ class Submit extends React.Component {
         };
         axios.post('/apiServer/result/add/', obj)
           .then(res => console.log(res.data));
-    
+
         this.setState({
           name: '',
           student_id: '',
@@ -98,44 +98,44 @@ class Submit extends React.Component {
         <div className="submit-container">
           <Form {...formItemLayout} onSubmit={this.handleSubmit}>
             <Form.Item>
-            {getFieldDecorator('name', {
-            rules: [{ required: true, message: '성명을 입력해주세요!' }],
-          })(
-              <div className="form-group">
-                <label className="submit-label">성명</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  value={this.state.name}
-                  onChange={this.onChangeName}
-                />
-              </div>)}
+              {getFieldDecorator('name', {
+                rules: [{ required: true, message: '성명을 입력해주세요!' }],
+              })(
+                <div className="form-group">
+                  <label className="submit-label">성명</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    value={this.state.name}
+                    onChange={this.onChangeName}
+                  />
+                </div>)}
             </Form.Item>
             <Form.Item>
-            {getFieldDecorator('student_id', {
-            rules: [{ required: true, message: '학번을 입력해주세요!' }],
-          })(
-            <div className="form-group">
-                <label className="submit-label">학번&nbsp;&nbsp;&nbsp;&nbsp;<span className="add-ex">* 8자리를 입력해주세요</span></label>
-                <input type="text"
-                  className="form-control"
-                  value={this.state.student_id}
-                  onChange={this.onChangeStudent_id}
-                />
-              </div>)}
+              {getFieldDecorator('student_id', {
+                rules: [{ required: true, message: '학번을 입력해주세요!' }],
+              })(
+                <div className="form-group">
+                  <label className="submit-label">학번&nbsp;&nbsp;&nbsp;&nbsp;<span className="add-ex">* 8자리를 입력해주세요</span></label>
+                  <input type="text"
+                    className="form-control"
+                    value={this.state.student_id}
+                    onChange={this.onChangeStudent_id}
+                  />
+                </div>)}
             </Form.Item>
             <Form.Item>
-            {getFieldDecorator('ewhaian_id', {
-            rules: [{ required: true, message: '이화이언 아이디를 입력해주세요!' }],
-          })(
-            <div className="form-group">
-                <label className="submit-label">이화이언 아이디</label>
-                <input type="text"
-                  className="form-control"
-                  value={this.state.ewhaian_id}
-                  onChange={this.onChangeEwhaian_id}
-                />
-              </div>)}
+              {getFieldDecorator('ewhaian_id', {
+                rules: [{ required: true, message: '이화이언 아이디를 입력해주세요!' }],
+              })(
+                <div className="form-group">
+                  <label className="submit-label">이화이언 아이디</label>
+                  <input type="text"
+                    className="form-control"
+                    value={this.state.ewhaian_id}
+                    onChange={this.onChangeEwhaian_id}
+                  />
+                </div>)}
             </Form.Item>
             <Form.Item>
               <label className="submit-label">지원서 제출&nbsp;&nbsp;&nbsp;&nbsp;<span className="add-ex">* 제출 시 수정이 불가합니다</span></label>
@@ -145,7 +145,11 @@ class Submit extends React.Component {
                 valuePropName: 'fileList',
                 getValueFromEvent: this.onChangeHandler,
               })(
-                <Upload.Dragger name="file" action="/apiServer/upload" onRemove="true">
+                <Upload.Dragger name="file" action="/apiServer/upload" onRemove={file => {
+                  axios.post('/apiServer/delete/' + file.size)
+                    .then(console.log("success!"))
+                  return true;
+                }}>
                   <p className="ant-upload-drag-icon">
                     <Icon type="plus-circle" />
                   </p>
@@ -154,6 +158,11 @@ class Submit extends React.Component {
                 </Upload.Dragger>,
               )}
             </Form.Item>
+            <div align="center" style={{ marginTop: "3%" }}>
+              <span className="add-ex">* 제출 시 파일 이름을 예시와 같이 작성해주세요<br />
+                예시) 37기 지원서_디자인(팀명)_김화연(성명)
+            </span>
+            </div>
             <Form.Item wrapperCol={{ span: 4, offset: 10 }}>
               <Button id="submit-button" htmlType="submit">
                 제출하기
