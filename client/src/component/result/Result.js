@@ -32,11 +32,11 @@ export default class Pass extends Component {
 
   selectButton() {
     return (this.state.result.map((object, i) => {
-      if (object.team === "디자인팀" && object.pass === "합격") {
+      if (object.team === "디자인팀" && object.pass === "서류합격") {
         return <Button shape="round" id="probation-design" className="probation-button">
           <Link to="/probationDesign">사전 과제 안내 페이지 바로 가기</Link>
         </Button>
-      } else if (object.team === "컨텐츠팀" && object.pass === "합격") {
+      } else if (object.team === "컨텐츠팀" && object.pass === "서류합격") {
         return <Button shape="round" id="probation-content" className="probation-button">
           <Link to="/probationContent">사전 과제 안내 페이지 바로 가기</Link>
         </Button>
