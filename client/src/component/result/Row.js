@@ -4,7 +4,6 @@ class Row extends Component {
 
   constructor(props) {
     super(props);
-    this.delete = this.delete.bind(this);
   }
 
   render() {

@@ -12,7 +12,7 @@ resultRoutes.route('/find/:student_id/:name/:ewhaian_id').post(function (req, re
   });
 });
 
-resultRoutes.route('/:key').get(function (req, res) {
+resultRoutes.route('/:key').post(function (req, res) {
   let k = req.params.key;
   Result.find({key:k}, function (err, result){
       res.json(result);
