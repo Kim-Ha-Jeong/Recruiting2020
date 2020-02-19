@@ -116,7 +116,7 @@ class Submit extends React.Component {
             rules: [{ required: true, message: '학번을 입력해주세요!' }],
           })(
             <div className="form-group">
-                <label className="submit-label">학번</label>
+                <label className="submit-label">학번&nbsp;&nbsp;&nbsp;&nbsp;<span className="add-ex">* 8자리를 입력해주세요</span></label>
                 <input type="text"
                   className="form-control"
                   value={this.state.student_id}
@@ -138,7 +138,7 @@ class Submit extends React.Component {
               </div>)}
             </Form.Item>
             <Form.Item>
-              <label className="submit-label">지원서 제출</label>
+              <label className="submit-label">지원서 제출&nbsp;&nbsp;&nbsp;&nbsp;<span className="add-ex">* 제출 시 수정이 불가합니다</span></label>
               {getFieldDecorator('file', {
                 rules: [{ required: true, message: '지원서를 제출해주세요!' }],
                 initialValue: this.props.dataset && this.props.dataset.filename ? this.props.dataset.filename : [],

@@ -98,7 +98,7 @@ class Design extends Component {
           {this.selectProbation()}
           <Form {...formItemLayout} onSubmit={this.handleSubmit}>
           <Form.Item>
-              <label className="submit-label">사전과제 제출</label>
+              <label className="submit-label">사전과제 제출&nbsp;&nbsp;&nbsp;&nbsp;<span className="add-ex">* 제출 시 수정이 불가합니다</span></label>
               {getFieldDecorator('file', {
                 rules: [{ required: true, message: '사전과제를 제출해주세요!' }],
                 initialValue: this.props.dataset && this.props.dataset.filename ? this.props.dataset.filename : [],
