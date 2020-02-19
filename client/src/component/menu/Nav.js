@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import 'antd/dist/antd.css';
 import { Menu } from 'antd';
 import './Nav.css';
+import logo from '../../logo.png';
 
 
 class Nav extends Component {
@@ -19,6 +20,11 @@ class Nav extends Component {
   render() {
     return (
       <Menu id={this.props.id} onClick={this.handleClick} selectedKeys={[this.state.current]} mode={this.props.mode}>
+        <Menu.Item>
+          <NavLink to="/">
+            <img src={logo} className="logo" alt="Ewhaian-logo" key="logo" style={{display:"none"}} />
+          </NavLink>
+        </Menu.Item>
         <Menu.Item key="submit">
           <NavLink to="/submit" className="link">
             지원서 제출

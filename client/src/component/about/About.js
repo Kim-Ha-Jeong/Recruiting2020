@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Route, Link } from "react-router-dom";
 import { Carousel, Card, Col, Row, Button } from "antd";
 import "./About.css";
 import logo from "./favicon.png";
@@ -31,7 +30,7 @@ const contentListNoTitle = {
         <hr id="card-line" />
         <Row id="img-wrapper">
           <Col id="logo-wrapper" lg={6} xl={6}>
-            <img src={logo} style={{width:"68%"}} />
+            <img src={logo} alt="Ewhaian-logo" style={{width:"68%"}} />
           </Col>
           <Col lg={18} xl={18}>
             <p className="ewhaian-text" align="left">
@@ -69,7 +68,7 @@ const contentListNoTitle = {
         <Col xs={24} sm={24} md={6} lg={6} xl={6} span={6} className="card-wrapper">
           <Card className="marketing" title="MARKETING" bordered={false}>
             <div style={{paddingBottom:"8px"}}>
-              <img src={marketing} className="team-img"/>
+              <img src={marketing} alt="marketing" className="team-img"/>
             </div>
             <p className="card-text">
               일상에 설렘, 재미, 즐거움을 주는<br /> 무엇인가를 좋아하는 벗<br /><br />
@@ -80,7 +79,7 @@ const contentListNoTitle = {
         <Col xs={24} sm={24} md={6} lg={6} xl={6} span={6} className="card-wrapper">
           <Card className="contents" title="Contents" bordered={false}>
             <div style={{paddingBottom:"8px"}}>
-              <img src={contents} className="team-img"/>
+              <img src={contents} alt="contents" className="team-img"/>
             </div>
             <p className="card-text">
               세상의 다양한 이야기를<br />기사로 담고 싶은 벗<br /><br />
@@ -91,7 +90,7 @@ const contentListNoTitle = {
         <Col xs={24} sm={24} md={6} lg={6} xl={6} span={6} className="card-wrapper">
           <Card className="design" title="DESIGN" bordered={false}>
             <div style={{paddingBottom:"8px"}}>
-              <img src={design} className="team-img"/>
+              <img src={design} alt="design" className="team-img"/>
             </div>
             <p className="card-text">
               통통튀는 아이디어로 내 생각을<br />자유롭게 표현해보고 싶은 벗<br /><br />
@@ -102,7 +101,7 @@ const contentListNoTitle = {
         <Col xs={24} sm={24} md={6} lg={6} xl={6} span={6} className="card-wrapper">
           <Card className="web" title="WEB" bordered={false}>
             <div style={{paddingBottom:"8px"}}>
-              <img src={web} className="team-img"/>
+              <img src={web} alt="web" className="team-img"/>
             </div>
             <p className="card-text">
               행사용 사이트 기획부터 개발까지<br />다양한 경험을 해보고 싶은 벗<br /><br />
