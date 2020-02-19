@@ -8,15 +8,11 @@ import './Nav.css';
 import Nav from './Nav';
 
 class Header extends Component {
-  state = {
-    current: false,
-    visible: false
-  };
-
-  handleClick = e => {
-    this.setState({
-      current: e.key,
-    });
+  constructor(props) {
+    super(props);
+    this.state = {
+      visible: false
+    }
   };
 
   hide = () => {
