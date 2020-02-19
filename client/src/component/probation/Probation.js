@@ -58,7 +58,6 @@ class Design extends Component {
 
   onChangeHandler = e => {
     var file = e.file;
-    console.log(file);
     this.setState({
       selectedFile: file
     });
