@@ -77,7 +77,6 @@ class Row extends Component {
 
   selectBrSplit(result) {
     var size = result.length;
-    console.log(size);
     if (size >= 5) {
       return (<span>
         {this.brSplit1(result)}
@@ -97,19 +96,21 @@ class Row extends Component {
   brSplit1(result) {
     return <span>
       {result[0]}<br className="forMobile" />
-      {result[1]}<br />
+      {result[1]}
     </span>
   }
 
   brSplit2(result) {
     return <span>
+      <br />
       {result[2]}<br className="forMobile" />
-      {result[3]}<br />
+      {result[3]}
     </span>
   }
 
   brSplit3(result) {
     return <span>
+      <br />
       {result[4]}<br className="forMobile" />
       {result[5]}<br />
     </span>
