@@ -85,7 +85,7 @@ class Row extends Component {
         {this.brSplit4(result)}
       </span>
       )
-    }if (size >= 5) {
+    }else if (size >= 5) {
       return (<span>
         {this.brSplit1(result)}
         {this.brSplit2(result)}
