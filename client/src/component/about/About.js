@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import { Route, Link } from "react-router-dom";
-import Ewhaian from "./Ewhaian";
-import Team from "./Team.js";
-import OB from "./OB.js";
 import { Carousel, Card, Col, Row, Button } from "antd";
 import "./About.css";
 import logo from "./favicon.png";
@@ -164,9 +161,6 @@ class About extends Component {
   render() {
     return (
       <div>
-        <Route path="/about/Ewhaian" component={Ewhaian} exact={true} />
-        <Route path="/about/Team" component={Team} />
-        <Route path="/about/OB" component={OB} />
         <Carousel autoplay>
           <div>
             <h3>이미지 준비중...</h3>
