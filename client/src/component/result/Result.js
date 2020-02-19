@@ -15,7 +15,7 @@ export default class Pass extends Component {
   }
 
   componentDidMount() {
-    axios.post('/apiServer/result/' + this.props.match.params.key)
+    axios.get('/apiServer/result/' + this.props.match.params.key)
       .then((res) => this.setState({
         result: res.data
       }))
