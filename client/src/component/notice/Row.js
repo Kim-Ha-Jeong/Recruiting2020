@@ -75,43 +75,44 @@ class Row extends Component {
     }
   }
 
-  selectBrSplit(result){
+  selectBrSplit(result) {
     var size = result.length;
     console.log(size);
-    if(size > 5){
-      {this.brSplit1(result)}
-      {this.brSplit3(result)}
-      {this.brSplit3(result)}
-      console.log(size);
-    } else if(size> 3){
-      {this.brSplit1(result)}
-      {this.brSplit2(result)}
-      console.log(size);
+    if (size >= 5) {
+      return (<span>
+        {this.brSplit1(result)}
+        {this.brSplit3(result)}
+        {this.brSplit3(result)}
+      </span>
+      )
+    } else if (size >= 3) {
+      return (<span>{this.brSplit1(result)}
+        {this.brSplit2(result)}
+      </span>)
     } else {
-      {this.brSplit1(result)}
-      console.log(size);
+      return (<span>{this.brSplit1(result)}</span>)
     }
   }
 
   brSplit1(result) {
-      return <span>
-        {result[0]}<br className="forMobile"/>
-        {result[1]}<br/>
-      </span>
+    return <span>
+      {result[0]}<br className="forMobile" />
+      {result[1]}<br />
+    </span>
   }
 
   brSplit2(result) {
-      return <span>
-        {result[2]}<br className="forMobile"/>
-        {result[3]}<br/>
-      </span>
+    return <span>
+      {result[2]}<br className="forMobile" />
+      {result[3]}<br />
+    </span>
   }
 
   brSplit3(result) {
-      return <span>
-        {result[4]}<br className="forMobile"/>
-        {result[5]}<br/>
-      </span>
+    return <span>
+      {result[4]}<br className="forMobile" />
+      {result[5]}<br />
+    </span>
   }
 
   panel() {
