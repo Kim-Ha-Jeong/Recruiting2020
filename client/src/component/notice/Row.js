@@ -98,7 +98,7 @@ class Row extends Component {
         return <Panel extra={this.selectExtra()} header={obj.title} key={obj.num}>
           <div>
             {this.selectSpan()}
-            {this.brSplit()}
+            {this.brSplit(result)}
           </div>
         </Panel>
       })
