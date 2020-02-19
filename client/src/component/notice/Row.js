@@ -77,43 +77,41 @@ class Row extends Component {
 
   selectBrSplit(result){
     var size = result.length;
+    console.log(size);
     if(size > 5){
       {this.brSplit1(result)}
       {this.brSplit3(result)}
       {this.brSplit3(result)}
+      console.log(size);
     } else if(size> 3){
       {this.brSplit1(result)}
       {this.brSplit2(result)}
+      console.log(size);
     } else {
       {this.brSplit1(result)}
+      console.log(size);
     }
   }
 
   brSplit1(result) {
-    for (var i = 0; i < result.length; i+2) {
       return <span>
-        {result[i]}<br className="forMobile"/>
-        {result[i+1]}<br/>
+        {result[0]}<br className="forMobile"/>
+        {result[1]}<br/>
       </span>
-    }
   }
 
   brSplit2(result) {
-    for (var i = 2; i < result.length; i+2) {
       return <span>
-        {result[i]}<br className="forMobile"/>
-        {result[i+1]}<br/>
+        {result[2]}<br className="forMobile"/>
+        {result[3]}<br/>
       </span>
-    }
   }
 
   brSplit3(result) {
-    for (var i = 4; i < result.length; i+2) {
       return <span>
-        {result[i]}<br className="forMobile"/>
-        {result[i+1]}<br/>
+        {result[4]}<br className="forMobile"/>
+        {result[5]}<br/>
       </span>
-    }
   }
 
   panel() {
