@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form,Button,Upload,Icon,Row } from 'antd';
+import { Form, Button, Upload, Icon, Row } from 'antd';
 import './probation.css';
 import axios from 'axios';
 
@@ -14,11 +14,11 @@ class Design extends Component {
   };
 
   componentDidMount() {
-    if(window.location.hash === "#/probationDesign"){
+    if (window.location.hash === "#/probationDesign") {
       this.setState({
         title: '디자인팀'
       })
-    } else if(window.location.hash === "#/probationContent"){
+    } else if (window.location.hash === "#/probationContent") {
       this.setState({
         title: '컨텐츠팀'
       })
@@ -41,18 +41,18 @@ class Design extends Component {
   }
 
   selectProbation() {
-    if(window.location.hash === "#/probationDesign"){
-      return <p id="design-wrapper">사전과제에 대해 안내해 드리겠습니다.<br/>
-                홈페이지 PC버전과 앱 메인에 들어갈 <br className="forMobile"/><span className="emphasize" style={{color: "#EC1468", fontSize: "16px"}}>이화이언 봄 배너</span>를 만들어주세요.<br/>
-                규격은 <span className="emphasize">580px*132px</span>으로, 저장은 <br className="forMobile"/><span className="emphasize">"웹용으로 제작-jpeg로 저장"</span>하면 됩니다.<br/>
-                <br/>
-              </p>
-    } else if(window.location.hash === "#/probationContent"){
-      return <div id="content-wrapper"> 
-                <Button id="download" shape="round" onClick={this.downloadHandler}>컨텐츠팀 사전과제 다운로드</Button>
-                <p id="probation-add">*버튼을 눌러 컨텐츠팀 사전과제 파일을 다운받고 파일을 이 페이지에 제출해주세요</p>
-                <br/>
-             </div>
+    if (window.location.hash === "#/probationDesign") {
+      return <p id="design-wrapper">사전과제에 대해 안내해 드리겠습니다.<br />
+        홈페이지 PC버전과 앱 메인에 들어갈 <br className="forMobile" /><span className="emphasize" style={{ color: "#EC1468", fontSize: "16px" }}>이화이언 봄 배너</span>를 만들어주세요.<br />
+        규격은 <span className="emphasize">580px*132px</span>으로, 저장은 <br className="forMobile" /><span className="emphasize">"웹용으로 제작-jpeg로 저장"</span>하면 됩니다.<br />
+        <br />
+      </p>
+    } else if (window.location.hash === "#/probationContent") {
+      return <div id="content-wrapper">
+        <Button id="download" shape="round" onClick={this.downloadHandler}>컨텐츠팀 사전과제 다운로드</Button>
+        <p id="probation-add">*버튼을 눌러 컨텐츠팀 사전과제 파일을 다운받고 파일을 이 페이지에 제출해주세요</p>
+        <br />
+      </div>
     }
   }
 
@@ -97,7 +97,7 @@ class Design extends Component {
         <div className="probation-container">
           {this.selectProbation()}
           <Form {...formItemLayout} onSubmit={this.handleSubmit}>
-          <Form.Item>
+            <Form.Item>
               <label className="submit-label">사전과제 제출&nbsp;&nbsp;&nbsp;&nbsp;<span className="add-ex">* 제출 시 수정이 불가합니다</span></label>
               {getFieldDecorator('file', {
                 rules: [{ required: true, message: '사전과제를 제출해주세요!' }],
@@ -106,8 +106,7 @@ class Design extends Component {
                 getValueFromEvent: this.onChangeHandler,
               })(
                 <Upload.Dragger name="file" action="/apiServer/upload" onRemove={file => {
-                  console.log(file.size);
-                  axios.post('/apiServer/delete/'+file.size)
+                  axios.post('/apiServer/delete/' + file.size)
                     .then(console.log("success!"))
                   return true;
                 }}>
@@ -119,6 +118,11 @@ class Design extends Component {
                 </Upload.Dragger>,
               )}
             </Form.Item>
+            <div align="center" style={{marginTop: "3%"}}>
+              <span className="add-ex">* 제출 시 파일 이름을 예시와 같이 작성해주세요<br />
+                예시) 37기 사전과제_디자인(팀명)_김화연(성명)
+            </span>
+            </div>
             <Form.Item wrapperCol={{ span: 4, offset: 10 }}>
               <Button id="submit-button" htmlType="submit">
                 제출하기
