@@ -112,7 +112,7 @@ class Row extends Component {
     return <span>
       <br />
       {result[4]}<br className="forMobile" />
-      {result[5]}<br />
+      {result[5]}
     </span>
   }
 
