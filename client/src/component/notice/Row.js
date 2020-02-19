@@ -75,17 +75,44 @@ class Row extends Component {
     }
   }
 
-  brSplit(result) {
-    for (var i = 0; i < result.length; i++) {
-      if (i % 2 === 0) {
-        return <span>
-          {result[i]}<br className="forMobile" />
-        </span>
-      } else {
-        return <span>
-          {result[i]}<br />
-        </span>
-      }
+  selectBrSplit(result){
+    var size = result.length;
+    if(size > 5){
+      {this.brSplit1(result)}
+      {this.brSplit3(result)}
+      {this.brSplit3(result)}
+    } else if(size> 3){
+      {this.brSplit1(result)}
+      {this.brSplit2(result)}
+    } else {
+      {this.brSplit1(result)}
+    }
+  }
+
+  brSplit1(result) {
+    for (var i = 0; i < result.length; i+2) {
+      return <span>
+        {result[i]}<br className="forMobile"/>
+        {result[i+1]}<br/>
+      </span>
+    }
+  }
+
+  brSplit2(result) {
+    for (var i = 2; i < result.length; i+2) {
+      return <span>
+        {result[i]}<br className="forMobile"/>
+        {result[i+1]}<br/>
+      </span>
+    }
+  }
+
+  brSplit3(result) {
+    for (var i = 4; i < result.length; i+2) {
+      return <span>
+        {result[i]}<br className="forMobile"/>
+        {result[i+1]}<br/>
+      </span>
     }
   }
 
@@ -98,7 +125,7 @@ class Row extends Component {
         return <Panel extra={this.selectExtra()} header={obj.title} key={obj.num}>
           <div>
             {this.selectSpan()}
-            {this.brSplit(result)}
+            {this.selectBrSplit(result)}
           </div>
         </Panel>
       })
