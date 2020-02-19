@@ -75,6 +75,20 @@ class Row extends Component {
     }
   }
 
+  brSplit(result) {
+    for (var i = 0; i < result.length; i++) {
+      if (i % 2 === 0) {
+        return <span>
+          {result[i]}<br className="forMobile" />
+        </span>
+      } else {
+        return <span>
+          {result[i]}<br />
+        </span>
+      }
+    }
+  }
+
   panel() {
     return (
       this.state.result.map((obj, i) => {
@@ -84,12 +98,7 @@ class Row extends Component {
         return <Panel extra={this.selectExtra()} header={obj.title} key={obj.num}>
           <div>
             {this.selectSpan()}
-            {result[0]}<br className="forMobile"/>
-            {result[1]}<br />
-            {result[2]}<br className="forMobile"/>
-            {result[3]}<br />
-            {result[4]}<br className="forMobile" />
-            {result[5]}
+            {this.brSplit()}
           </div>
         </Panel>
       })
