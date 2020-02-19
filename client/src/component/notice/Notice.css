@@ -94,3 +94,8 @@ table th:last-child{
         margin : 2% -1%;
     }
 }
+
+.add-ex{
+    color: #EC1468;
+    font-size: 12px;
+}

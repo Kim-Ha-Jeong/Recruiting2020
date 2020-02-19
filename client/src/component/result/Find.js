@@ -93,7 +93,7 @@ class Find extends Component {
                 rules: [{ required: true, message: '학번을 입력해주세요!' }],
               })(
                 <div className="form-group">
-                  <label className="submit-label">학번</label>
+                  <label className="submit-label">학번&nbsp;&nbsp;&nbsp;&nbsp;<span className="add-ex">* 8자리를 입력해주세요</span></label>
                   <input type="text"
                     className="form-control"
                     onChange={this.onChangeStudent_id}
