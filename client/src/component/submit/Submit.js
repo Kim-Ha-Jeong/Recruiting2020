@@ -48,7 +48,6 @@ class Submit extends React.Component {
 
   onChangeHandler = e => {
     var file = e.file;
-    console.log(file);
     this.setState({
       selectedFile: file
     });
@@ -68,7 +67,7 @@ class Submit extends React.Component {
           ewhaian_id: this.state.ewhaian_id
         };
         axios.post('/apiServer/result/add/', obj)
-          .then(res => console.log(res.data));
+          .then(res => console.log('success'));
 
         this.setState({
           name: '',

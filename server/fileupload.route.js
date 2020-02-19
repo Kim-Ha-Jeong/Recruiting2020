@@ -13,10 +13,6 @@ uploadRoutes.post("/", (req, res, next) => {
         } else if (err) {
             return next(err);
         }
-        /*
-        console.log('저장파일명:'+req.file.filename);
-        console.log('크기'+req.file.size)
-        */
         })
 
         return res.json({success : 1});
