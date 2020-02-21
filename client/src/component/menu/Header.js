@@ -11,8 +11,15 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      visible: false
+      visible: false,
+      current: false
     }
+  };
+
+  handleClick = e => {
+    this.setState({
+      current: e.key,
+    });
   };
 
   hide = () => {
