@@ -54,7 +54,7 @@ export default class Pass extends Component {
         <hr />
         <div className="result-container">
           <h4 align="center" id="result-title">합격 / 불합격 문구</h4>
-          <p id="add" align="center">추가 문구 및 안내사항</p>
+          <p id="add" align="center">이화이언 운영진에 지원해주셔서 감사합니다</p>
           <table id="result-table">
             <thead id="result-thead">
               <tr>

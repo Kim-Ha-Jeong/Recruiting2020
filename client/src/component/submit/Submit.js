@@ -115,7 +115,7 @@ class Submit extends React.Component {
                 rules: [{ required: true, message: '학번을 입력해주세요!' }],
               })(
                 <div className="form-group">
-                  <label className="submit-label">학번&nbsp;&nbsp;&nbsp;&nbsp;<span className="add-ex">* 8자리를 입력해주세요</span></label>
+                  <label className="submit-label">학번&nbsp;&nbsp;&nbsp;&nbsp;<span className="add-ex">* 7자리를 입력해주세요</span></label>
                   <input type="text"
                     className="form-control"
                     value={this.state.student_id}
