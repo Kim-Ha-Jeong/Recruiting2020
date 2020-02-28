@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
-import Manager from './Manager';
+import RowManager from './RowManager';
 
 export default class ResultManager extends Component {
   constructor(props) {
@@ -18,25 +17,30 @@ export default class ResultManager extends Component {
       .catch(function (error) {
         console.log(error);
       })
+
+      if(window.location.hash === "#/result2001Manager"){
+        var hidden = document.getElementById("computer");
+        hidden.style.display = "none"
+      }
   }
 
   tabRow() {
     return this.state.result.map(function (object, i) {
-      return <Manager obj={object} key={i} />;
+      return <RowManager obj={object} key={i} />;
     });
   }
 
   render() {
     return (
-      <div>
-        <h3 align="center">Notice</h3>
-        <table className="table table-striped" style={{ marginTop: 20 }}>
-          <thead>
+      <div style={{margin:"5% 15%"}}>
+        <h3 align="center">지원자 리스트</h3>
+        <table className="table table-striped" style={{ marginTop: "5%",tableLayout: "fixed"}}>
+          <thead align="center">
             <tr>
               <th>이름</th>
               <th>학번</th>
               <th>이화이언 아이디</th>
-              <th colSpan="2">Action</th>
+              <th>수정하기</th>
             </tr>
           </thead>
           <tbody>
