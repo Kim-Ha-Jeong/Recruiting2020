@@ -117,7 +117,7 @@ const contentListNoTitle = {
       <Card className="about-ewhaian">
         <p className="card-title" id="e-title">운영진 활동후기</p>
         <hr id="card-line" />
-        <div className="ewhaian-text" style={{ marginLeft: "3%" }} align="left" id="OB">
+        <div className="ewhaian-text" style={{ marginLeft: "3%",marginBottom: "3%" }} align="left" id="OB">
           <span style={{ color: "#EC1468" }}>From. 32기 마스터 고승의</span><br /><br />
           새내기 시절 패기로 지원했던<br className="forMobile" /> 수습운영진에 합격하여 <br className="forMobile" />마스터로 수료하기까지, <br className="forMobile"/>
           2년 반의 활동이 끝나 운영진 후기를<br className="forMobile" /> 쓰니 감회가 새롭습니다.<br /> 세 번의 배꽃정원과
