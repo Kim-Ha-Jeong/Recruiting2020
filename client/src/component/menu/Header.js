@@ -76,17 +76,17 @@ class Header extends Component {
               <img src={logo} className="logo" alt="Ewhaian-logo" key="logo" />
             </Link>
           </Col>
-          <Col xs={12} offset={3}>
+          <Col xs={10} offset={3}>
             <Nav mode="horizontal" id="menu"></Nav>
           </Col>
-          <Col xs={3} className="btn-wrap">
+          <Col xs={4} className="btn-wrap">
             <a href="http://ewhaian.com">
             <Button id="ewhaian" shape="round">
               이화이언 홈
             </Button>
             </a>
           </Col>
-          <Col xs={3} className="btn-wrap" style={{ paddingLeft: "4%" }}>
+          <Col xs={4} className="btn-wrap">
             <a href="http://ewhaianrecruiting.com/apiServer/download/ewhaian_application_37.docx">
               <Button id="download" shape="round" onClick={this.downloadHandler}>
                 지원서 다운
