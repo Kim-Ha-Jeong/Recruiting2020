@@ -13,7 +13,13 @@ let Result = new Schema({
   ewhaian_id: {
     type: String
   },
+  team: {
+    type: String
+  },
   pass: {
+    type: String
+  },
+  key: {
     type: String
   }
 },{

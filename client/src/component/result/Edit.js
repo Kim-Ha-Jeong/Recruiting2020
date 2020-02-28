@@ -7,12 +7,18 @@ export default class Edit extends Component {
     this.onChangeName = this.onChangeName.bind(this);
     this.onChangeStudent = this.onChangeStudent.bind(this);
     this.onChangeId = this.onChangeId.bind(this);
+    this.onChangeTeam = this.onChangeTeam.bind(this);
+    this.onChangePass = this.onChangePass.bind(this);
+    this.onChangeKey = this.onChangeKey.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
       name: '',
       student_id: '',
-      ewhaian_id:''
+      ewhaian_id:'',
+      team: '',
+      pass: '',
+      key: ''
     }
   }
 
@@ -22,7 +28,11 @@ export default class Edit extends Component {
               this.setState({ 
                 name: response.data.name, 
                 student_id: response.data.student_id,
-                ewhaian_id: response.data.ewhaian_id });
+                ewhaian_id: response.data.ewhaian_id,
+                team: response.data.team,
+                pass: response.data.pass,
+                key: response.data.key
+             });
           })
           .catch(function (error) {
               console.log(error);
@@ -45,12 +55,31 @@ export default class Edit extends Component {
     })
   }
 
+  onChangeTeam(e) {
+    this.setState({
+      team: e.target.value
+    });
+  }
+  onChangePass(e) {
+    this.setState({
+      pass: e.target.value
+    })  
+  }
+  onChangeKey(e) {
+    this.setState({
+      key: e.target.value
+    })
+  }
+
   onSubmit(e) {
     e.preventDefault();
     const obj = {
       name: this.state.name,
       student_id: this.state.student_id,
-      ewhaian_id: this.state.ewhaian_id
+      ewhaian_id: this.state.ewhaian_id,
+      team: this.state.team,
+      pass: this.state.pass,
+      key: this.state.key
     };
 
     axios.post('/apiServer/result/update/'+this.props.match.params.id, obj)
@@ -87,6 +116,30 @@ export default class Edit extends Component {
                       className="form-control"
                       value={this.state.ewhaian_id}
                       onChange={this.onChangeId}
+                      />
+                </div>
+                <div className="form-group">
+                    <label>팀</label>
+                    <input type="text" 
+                      className="form-control"
+                      value={this.state.team}
+                      onChange={this.onChangeTeam}
+                      />
+                </div>
+                <div className="form-group">
+                    <label>합격여부</label>
+                    <input type="text" 
+                      className="form-control"
+                      value={this.state.pass}
+                      onChange={this.onChangePass}
+                      />
+                </div>
+                <div className="form-group">
+                    <label>키값</label>
+                    <input type="text" 
+                      className="form-control"
+                      value={this.state.key}
+                      onChange={this.onChangeKey}
                       />
                 </div>
                 <div className="form-group">
