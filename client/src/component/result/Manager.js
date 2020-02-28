@@ -26,7 +26,7 @@ class Manager extends Component {
             {this.props.obj.ewhaian_id}
           </td>
           <td>
-            <Link to={"/result/edit/"+this.props.obj._id} className="btn btn-primary">Edit</Link>
+            <Link to={"/resultManager/edit/"+this.props.obj._id} className="btn btn-primary">Edit</Link>
           </td>
           <td>
             <button onClick={this.delete} className="btn btn-danger">Delete</button>
