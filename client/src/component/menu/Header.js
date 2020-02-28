@@ -87,7 +87,11 @@ class Header extends Component {
             </a>
           </Col>
           <Col xs={3} className="btn-wrap" style={{ paddingLeft: "4%" }}>
-            <Button id="download" shape="round" onClick={this.downloadHandler}>지원서 다운</Button>
+            <a href="http://ewhaianrecruiting.com/apiServer/download/ewhaian_application_37.docx">
+              <Button id="download" shape="round" onClick={this.downloadHandler}>
+                지원서 다운
+              </Button>
+            </a>
           </Col>
         </Row>
       </header>
