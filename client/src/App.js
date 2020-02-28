@@ -10,6 +10,8 @@ import Result from './component/result/Result';
 import Research1 from './component/research/research1';
 import Research2 from './component/research/research2';
 import Probation from './component/probation/Probation';
+import ResultManager from './component/result/ResultManager';
+import Edit from './component/result/Edit';
 
 class App extends Component{
   render(){
@@ -29,6 +31,8 @@ class App extends Component{
           <Route path="/research2" component={Research2} />
           <Route path="/probationDesign" component={Probation} />
           <Route path="/probationContent" component={Probation} />
+          <Route path="/resultManager" component={ResultManager} />
+          <Route path="/resultManager/edit/:id" component={Edit} />
         </div>
       </div>
 
