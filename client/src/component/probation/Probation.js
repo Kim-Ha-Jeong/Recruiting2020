@@ -49,7 +49,9 @@ class Design extends Component {
       </p>
     } else if (window.location.hash === "#/probationContent") {
       return <div id="content-wrapper">
-        <Button id="download" shape="round" onClick={this.downloadHandler}>컨텐츠팀 사전과제 다운로드</Button>
+        <a href="http://ewhaianrecruiting.com/apiServer/download/이화이언 컨텐츠팀 37기 수습모집 면접자 사전과제_이름.docx">
+          <Button id="download" shape="round" onClick={this.downloadHandler}>컨텐츠팀 사전과제 다운로드</Button>
+        </a>
         <p id="probation-add">*버튼을 눌러 컨텐츠팀 사전과제 파일을 다운받고 파일을 이 페이지에 제출해주세요</p>
         <br />
       </div>
