@@ -30,7 +30,7 @@ resultRoutes.route('/:key').post(function (req, res) {
   });
 });
 
-resultoutes.route('/edit/:id').get(function (req, res) {
+resultRoutes.route('/edit/:id').get(function (req, res) {
   let id = req.params.id;
   Result.findById(id, function (err, result){
       res.json(result);
