@@ -128,3 +128,7 @@ a {
         display: none;
     }
 }
+
+.ant-menu-vertical > .ant-menu-item:active, .ant-menu-submenu-title:active{
+    background-color: #FEECF3!important;
+}

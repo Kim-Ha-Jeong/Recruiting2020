@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import 'antd/dist/antd.css';
 import { Menu } from 'antd';
 import './Nav.css';
-import logo from '../../logo.png';
-
 
 class Nav extends Component {
   state = {
