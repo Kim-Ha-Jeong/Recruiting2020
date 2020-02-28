@@ -31,8 +31,8 @@ class App extends Component{
           <Route path="/research2" component={Research2} />
           <Route path="/probationDesign" component={Probation} />
           <Route path="/probationContent" component={Probation} />
-          <Route path="/resultManager" component={ResultManager} />
-          <Route path="/resultManager/edit/:id" component={Edit} />
+          <Route path="/result2001Manager" component={ResultManager} />
+          <Route path="/result2001Manager/edit/:id" component={Edit} />
         </div>
       </div>
 

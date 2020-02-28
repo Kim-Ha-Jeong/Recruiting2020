@@ -85,7 +85,7 @@ export default class Edit extends Component {
     axios.post('/apiServer/result/update/'+this.props.match.params.id, obj)
         .then(res => console.log(res.data));
 
-    this.props.history.push('/resultManager');
+    this.props.history.push('/result2001Manager');
   }
 
   render() {

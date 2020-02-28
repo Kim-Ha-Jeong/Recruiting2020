@@ -40,18 +40,18 @@ hr{
     line-height: 2.5;
     margin-bottom: 5%;
 }
-
-table th:first-child{
-    border-radius:20px 0 0 20px;
-}
   
-table th:last-child{
+#notice-table th:last-child{
     border-radius:0 20px 20px 0;
+}
+
+#notice-table th:first-child{
+    border-radius:20px 0 0 20px;
+    border-right: 0.85px solid #ffffff;
 }
 
 .notice-th{
     font-weight: lighter;
-    border-right: 0.35px solid white;
 }
 
 #noticeLink, #FAQLink{

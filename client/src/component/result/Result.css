@@ -75,17 +75,18 @@ p#add{
     margin-bottom: 5%;
 }
 
-table th:first-child{
+#result-table th:first-child{
     border-radius:20px 0 0 20px;
-   
+    border-right: 0.85px solid #ffffff;
 }
   
-table th:last-child{
+#result-table th:last-child{
     border-radius:0 20px 20px 0;
+    border-left: 0.85px solid #ffffff;
 }
 
-.result-th{
-    border: 0.35px solid #ffffff;
+#result-table th:nth-child(3n+2){
+    border-right: 0.85px solid #ffffff;
 }
 
 .probation-button{
