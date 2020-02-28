@@ -28,12 +28,6 @@ class Manager extends Component {
           <td>
             <Link to={"/resultManager/edit/"+this.props.obj._id} className="btn btn-primary">Edit</Link>
           </td>
-          <td>
-            <button onClick={this.delete} className="btn btn-danger">Delete</button>
-          </td>
-          <td>
-            <Link to="/find" className="btn btn-primary">Result</Link>
-          </td>
         </tr>
     );
   }

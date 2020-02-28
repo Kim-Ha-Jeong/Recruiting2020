@@ -33,9 +33,9 @@ export default class ResultManager extends Component {
         <table className="table table-striped" style={{ marginTop: 20 }}>
           <thead>
             <tr>
-              <th>번호</th>
-              <th>제목</th>
-              <th>내용</th>
+              <th>이름</th>
+              <th>학번</th>
+              <th>이화이언 아이디</th>
               <th colSpan="2">Action</th>
             </tr>
           </thead>
@@ -43,8 +43,6 @@ export default class ResultManager extends Component {
             {this.tabRow()}
           </tbody>
         </table>
-        <Link to="/resultManager/create" className="btn btn-primary">Create</Link>
-
         </div>
           );
         }
