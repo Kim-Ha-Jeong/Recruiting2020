@@ -52,6 +52,8 @@
 /* 결과 추가 설명 */
 #result-title{
     margin-bottom: 3%;
+    color: #EC1468;
+    font-size: 16px!important;
 }
 
 p#add{

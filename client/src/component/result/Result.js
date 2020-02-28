@@ -49,20 +49,7 @@ export default class Pass extends Component {
     )
   }
 
-  selectWord1() {
-    return (this.state.result.map((object, i) => {
-      if (object.pass === "서류합격") {
-        return <span>서류합격</span>
-      } else if (object.pass === "최종합격") {
-        return <span>최종합격</span>
-      } else if (object.pass === "불합격") {
-        return <span>불합격</span>
-      }
-    })
-    )
-  }
-
-  selectWord2() {
+  selectWord() {
     return (this.state.result.map((object, i) => {
       if (object.pass === "서류합격" || object.pass === "최종합격") {
         return <span>축하합니다! 합격하셨습니다!</span>
@@ -81,8 +68,7 @@ export default class Pass extends Component {
         </Row>
         <hr />
         <div className="result-container">
-          <h4 align="center" id="result-title">{this.selectWord1()}</h4>
-          <p id="add" align="center">{this.selectWord2()}</p>
+          <h5 align="center" id="result-title">{this.selectWord()}</h5>
           <table id="result-table">
             <thead id="result-thead">
               <tr>
