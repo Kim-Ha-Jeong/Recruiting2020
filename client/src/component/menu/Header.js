@@ -80,9 +80,11 @@ class Header extends Component {
             <Nav mode="horizontal" id="menu"></Nav>
           </Col>
           <Col xs={3} className="btn-wrap">
+            <a href="http://ewhaian.com">
             <Button id="ewhaian" shape="round">
-              <a href="http://ewhaian.com">이화이언 홈</a>
+              이화이언 홈
             </Button>
+            </a>
           </Col>
           <Col xs={3} className="btn-wrap" style={{ paddingLeft: "4%" }}>
             <Button id="download" shape="round" onClick={this.downloadHandler}>지원서 다운</Button>

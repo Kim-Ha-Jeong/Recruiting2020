@@ -4,15 +4,20 @@ import 'antd/dist/antd.css';
 import { Menu } from 'antd';
 import './Nav.css';
 
-
 class Nav extends Component {
   state = {
     current: false
   };
 
+  handleClick = e => {
+    this.setState({
+      current: e.key,
+    });
+  };
+
   render() {
     return (
-      <Menu id={this.props.id} selectedKeys={[this.state.current]} mode={this.props.mode}>
+      <Menu id={this.props.id} onClick={this.handleClick} selectedKeys={[this.state.current]} mode={this.props.mode}>
         <Menu.Item key="submit">
           <NavLink to="/submit" className="link">
             지원서 제출
