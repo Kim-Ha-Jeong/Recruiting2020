@@ -165,7 +165,7 @@ class About extends Component {
           </div>
         </Carousel>
         <Card
-          style={{ width: "100%", paddingRight: "13%", paddingLeft: "16%", paddingTop: "0" }}
+          style={{ width: "100%", paddingRight: "14%", paddingLeft: "14%", paddingTop: "0" }}
           tabList={tabListNoTitle}
           activeTabKey={this.state.noTitleKey}
           onTabChange={key => {
