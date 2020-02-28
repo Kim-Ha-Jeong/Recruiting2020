@@ -26,16 +26,16 @@ const contentListNoTitle = {
   title1: (
     <Row gutter={16} className="about-wrapper">
       <Card className="about-ewhaian">
-        <p align="left" className="card-title">이화이언 소개</p>
+        <p className="card-title" id="e-title">이화이언 소개</p>
         <hr id="card-line" />
         <Row id="img-wrapper">
           <Col id="logo-wrapper" lg={6} xl={6}>
             <img src={logo} alt="Ewhaian-logo" style={{width:"68%"}} />
           </Col>
           <Col lg={18} xl={18}>
-            <p className="ewhaian-text" align="left">
+            <div className="ewhaian-text" align="left">
               <span style={{ fontWeight: "bold" }}>이화여대 최대의 온라인 커뮤니티이자<br /> 이화의 재학생, 졸업생들이<br className="forMobile" /> 서로 교류하고 소통할 수 있는 공간<br className="forMobile" /> 이화이언을 소개합니다!</span>
-              <div class="forMobile" id="about-btn-wrapper" style={{ marginTop: "5%" }}>
+              <div className="forMobile" id="about-btn-wrapper" style={{ marginTop: "5%" }}>
                 <Button shape="round" id="probation-content" className="probation-button">
                   <a href="http://www.ewhaian.com/WebPage/Ewhaian/main.asp">이화이언 소개 자세히 보기</a>
                 </Button>
@@ -57,7 +57,7 @@ const contentListNoTitle = {
                 <br />
                 또한, 이화이언은 온라인 뿐만 아니라 오프라인에서도 많은 활동들을 진행하고 있습니다. 심심하고 무료한 학교 생활 속 이화이언 5월 드림과 11월 배꽃정원은 화연들에게 매번 색다른 즐거움을 선사하고 있습니다.
               </span>
-            </p>
+            </div>
           </Col>
         </Row>
       </Card>
@@ -115,15 +115,15 @@ const contentListNoTitle = {
   title3: (
     <Row gutter={16} className="about-wrapper">
       <Card className="about-ewhaian">
-        <p align="left" className="card-title">운영진 활동후기</p>
+        <p className="card-title" id="e-title">운영진 활동후기</p>
         <hr id="card-line" />
-        <p className="ewhaian-text" style={{ marginLeft: "3%" }} align="left" id="OB">
+        <div className="ewhaian-text" style={{ marginLeft: "3%" }} align="left" id="OB">
           <span style={{ color: "#EC1468" }}>From. 32기 마스터 고승의</span><br /><br />
-          새내기 시절 패기로 지원했던<br className="forMobile" />수습운영진에 합격하여<br className="forMobile" />마스터로 수료하기까지,<br />
-          2년 반의 활동이 끝나 운영진 후기를<br className="forMobile" /> 쓰니 감회가 새롭습니다.<br className="forMobile" /> 세 번의 배꽃정원과 <br className="forComputer" />
-          오월드림,<br className="forMobile" />생일파티와 크고 작은 부스부터<br className="forMobile" />수많은 회의, 운영진들과 함께 울고<br />
+          새내기 시절 패기로 지원했던<br className="forMobile" /> 수습운영진에 합격하여 <br className="forMobile" />마스터로 수료하기까지, <br className="forMobile"/>
+          2년 반의 활동이 끝나 운영진 후기를<br className="forMobile" /> 쓰니 감회가 새롭습니다.<br /> 세 번의 배꽃정원과
+          오월드림, <br className="forMobile" /> 생일파티와 크고 작은 부스부터 <br className="forMobile" />수많은 회의, 운영진들과 함께 울고 <br className="forMobile"/>
           웃으며 행복했던 기억들이 스쳐 갑니다.
-          <div class="forMobile" id="about-btn-wrapper" style={{ marginTop: "5%" }}>
+          <div className="forMobile" id="about-btn-wrapper" style={{ marginTop: "5%" }}>
             <Button shape="round" id="probation-content" className="probation-button">
               <a href="http://www.ewhaian.com/WebPage/Ewhaian/about_1.asp">OB 소감 자세히 보기</a>
             </Button>
@@ -136,12 +136,12 @@ const contentListNoTitle = {
             그럼에도 최고의 시간이라고 말할 수 있는 이유는 이화이언에서 너무도 멋진 사람들과 함께할 수 있었고,<br />
             넘치는 경험을 통해 많은 것을 배웠고 변화할 수 있었기 때문입니다.<br /><br />
 
-            이화이언의 모토처럼 지난 시간 동안 '이화 안의 더 큰 만남' 을 함께 만들어주신<br />
+            이화이언의 모토처럼 지난 시간 동안 '이화 안의 더 큰 만남' 을 함께 만들어주신
             운영진 여러분, 회원 여러분들께 감사드립니다.<br />
             내년이면 20주년을 맞는 이화이언이 앞으로 더 많은 날들을 만들어나가기를 바라며, 후배 운영진들에게 응원을 전합니다.<br />
             이화를 사랑하는 사람들의 모임, 이화이언을 사랑해주시고 아껴주세요. 감사합니다.<br />
           </span>
-        </p>
+        </div>
       </Card>
     </Row>
   )
@@ -162,9 +162,6 @@ class About extends Component {
         <Carousel autoplay>
           <div>
             <h3>이미지 준비중...</h3>
-          </div>
-          <div>
-            <h3>1</h3>
           </div>
         </Carousel>
         <Card

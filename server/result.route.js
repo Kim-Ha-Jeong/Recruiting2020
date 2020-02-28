@@ -30,4 +30,32 @@ resultRoutes.route('/:key').post(function (req, res) {
   });
 });
 
+resultoutes.route('/edit/:id').get(function (req, res) {
+  let id = req.params.id;
+  Result.findById(id, function (err, result){
+      res.json(result);
+  });
+});
+
+//  Defined update route
+resultRoutes.route('/update/:id').post(function (req, res) {
+    Result.findById(req.params.id, function(err, notice) {
+    if (!notice)
+      res.status(404).send("data is not found");
+    else {
+        notice.name = req.body.name;
+        notice.student_id = req.body.student_id;
+        notice.ewhaian_id = req.body.ewhaian_id;
+
+        notice.save().then(notice => {
+          res.json('Update complete');
+      })
+      .catch(err => {
+            res.status(400).send("unable to update the database");
+      });
+    }
+  });
+});
+
+
 module.exports = resultRoutes;
