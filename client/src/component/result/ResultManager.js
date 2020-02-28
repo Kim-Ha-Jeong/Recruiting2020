@@ -43,7 +43,7 @@ export default class ResultManager extends Component {
               <th>수정하기</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody align="center">
             {this.tabRow()}
           </tbody>
         </table>
