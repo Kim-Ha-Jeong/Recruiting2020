@@ -34,9 +34,17 @@ class Complete extends Component {
 
   selectMove(){
     if(window.location.hash === "#/success"){
-      return <Link to="/">홈 바로 가기</Link>
+      return <Link to="/">
+          <Button shape="round" id="probation-design" className="probation-button">
+            홈 바로 가기
+          </Button>
+        </Link>
     } else if(window.location.hash === "#/undefine"){
-      return <Link to="/result">결과 확인 페이지 바로 가기</Link>
+      return <Link to="/result">
+        <Button shape="round" id="probation-design" className="probation-button">
+          결과 확인 페이지 바로 가기
+        </Button>
+      </Link>
     }
   }
 
@@ -46,10 +54,8 @@ class Complete extends Component {
         <Row id="icon-wrapper">
           {this.selectIcon()}
         </Row>
-    <h2 id="title" align="center" className="btn-wrapper">{this.state.description}</h2>
-        <Button shape="round" id="probation-design" className="probation-button">
+      <h2 id="title" align="center" className="btn-wrapper">{this.state.description}</h2>
           {this.selectMove()}
-        </Button>
       </div>
     );
   }
