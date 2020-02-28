@@ -11,7 +11,7 @@ export default class ResultManager extends Component {
     };
   }
   componentDidMount() {
-    axios.get('/apiServer/result')
+    axios.post('/apiServer/result')
       .then(response => {
         this.setState({ result: response.data });
       })

@@ -3,7 +3,7 @@ const resultRoutes = express.Router();
 // Defined store route
 let Result = require('./result.model');
 
-resultRoutes.route('/').get(function (req, res) {
+resultRoutes.route('/').post(function (req, res) {
   Result.find(function (err, resultes) {
     if (err) {
       console.log(err);
@@ -41,7 +41,7 @@ resultRoutes.route('/:key').post(function (req, res) {
   });
 });
 
-resultRoutes.route('/edit/:id').get(function (req, res) {
+resultRoutes.route('/edit/:id').post(function (req, res) {
   let id = req.params.id;
   Result.findById(id, function (err, result) {
     res.json(result);
@@ -57,7 +57,9 @@ resultRoutes.route('/update/:id').post(function (req, res) {
       notice.name = req.body.name;
       notice.student_id = req.body.student_id;
       notice.ewhaian_id = req.body.ewhaian_id;
-
+      notice.team = req.body.team;
+      notice.pass = req.body.pass;
+      notice.key = req.body.key;
       notice.save().then(notice => {
         res.json('Update complete');
       })

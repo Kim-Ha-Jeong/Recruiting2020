@@ -23,7 +23,7 @@ export default class Edit extends Component {
   }
 
   componentDidMount() {
-      axios.get('/apiServer/result/edit/'+this.props.match.params.id)
+      axios.post('/apiServer/result/edit/'+this.props.match.params.id)
         .then(response => {
               this.setState({ 
                 name: response.data.name, 
