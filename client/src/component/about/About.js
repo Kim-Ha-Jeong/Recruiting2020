@@ -6,6 +6,8 @@ import marketing from "./marketing.png";
 import contents from "./contents.png";
 import design from "./design.png";
 import web from "./web.png";
+import popUp from "./popup.png";
+import banner from "./banner.png";
 
 const tabListNoTitle = [
   {
@@ -159,11 +161,12 @@ class About extends Component {
   render() {
     return (
       <div>
-        <Carousel autoplay>
-          <div>
-            <h3>이미지 준비중...</h3>
-          </div>
-        </Carousel>
+        <Card className="forComputer" style={{paddingRight: "14%",paddingLeft: "14%"}}>
+            <img src={banner} style={{width: "100%", borderRadius : "15px"}}/>
+        </Card>
+        <Card className="forMobile" style={{marginTop: "1.5%"}}>
+            <img src={popUp} style={{width: "100%", borderRadius : "15px" }} />
+        </Card>
         <Card
           style={{ width: "100%", paddingRight: "14%", paddingLeft: "14%", paddingTop: "0" }}
           tabList={tabListNoTitle}
