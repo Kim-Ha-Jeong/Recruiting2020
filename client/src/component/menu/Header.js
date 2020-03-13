@@ -79,7 +79,7 @@ class Header extends Component {
           <Col xs={10} offset={3}>
             <Nav mode="horizontal" id="menu"></Nav>
           </Col>
-          <Col xs={4} className="btn-wrap">
+          <Col xs={4} className="btn-wrap" style={{ textAlign: "right" }}>
             <a href="http://ewhaian.com">
             <Button id="ewhaian" shape="round">
               이화이언 홈
