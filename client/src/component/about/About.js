@@ -162,7 +162,7 @@ class About extends Component {
     return (
       <div>
         <Card className="forComputer" style={{paddingRight: "14%",paddingLeft: "14%"}}>
-            <img src={banner} style={{width: "100%", borderRadius : "15px"}}/>
+            <img src={banner} style={{width: "100%", borderRadius : "20px"}}/>
         </Card>
         <Card className="forMobile" style={{marginTop: "1.5%"}}>
             <img src={popUp} style={{width: "100%", borderRadius : "15px" }} />
