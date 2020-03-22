@@ -106,3 +106,8 @@ p#add{
 #probation-wrapper{
     text-align: center!important;
 }
+
+.ant-btn{
+    color: #EC1468!important;
+    border-color: #EC1468!important;
+}

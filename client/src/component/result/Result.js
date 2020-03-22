@@ -60,6 +60,19 @@ export default class Pass extends Component {
     )
   }
 
+  formAdd(){
+    return (this.state.result.map((object, i) => {
+      if (object.pass === "서류합격") {
+        return <div id="probation-wrapper">
+          <p>* 서류에 합격하신 분들은 반드시<br className="forMobile" />수습 운영진 설문조사에 참여해야합니다</p>
+        <Link to="https://forms.gle/uVhvtjpYcDRfxZD38">
+          <Button>수습 운영진 설문하러 가기</Button>
+        </Link>    
+        </div>
+      }
+    }))
+  }
+
   render() {
     return (
       <div id="wrapper">
@@ -85,6 +98,7 @@ export default class Pass extends Component {
           <div id="probation-wrapper">
             {this.selectButton()}
           </div>
+          {this.formAdd()}
         </div>
       </div>
     );
