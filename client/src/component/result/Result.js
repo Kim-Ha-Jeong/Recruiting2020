@@ -66,7 +66,7 @@ export default class Pass extends Component {
         return <div id="probation-wrapper">
           <p>* 서류에 합격하신 분들은 반드시<br className="forMobile" />수습 운영진 설문조사에 참여해야합니다</p>
         <a href="https://forms.gle/uVhvtjpYcDRfxZD38">
-          <Button shape="round" id="probation-button">수습 운영진 설문하러 가기</Button>
+          <Button shape="round" className="probation-button">수습 운영진 설문하러 가기</Button>
         </a>    
         </div>
       }
