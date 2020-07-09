@@ -27,14 +27,14 @@ class Design extends Component {
 
   downloadHandler = () => {
     axios({
-      url: '/apiServer/download/이화이언 컨텐츠팀 37기 수습모집 면접자 사전과제_이름.docx',
+      url: '/apiServer/download/이화이언 컨텐츠팀 38기 수습모집 면접자 사전과제_이름.docx',
       method: 'GET',
       responseType: 'blob', // important
     }).then((response) => {
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const link = document.createElement('a');
       link.href = url;
-      link.setAttribute('download', '이화이언 컨텐츠팀 37기 수습모집 면접자 사전과제_이름.docx');
+      link.setAttribute('download', '이화이언 컨텐츠팀 38기 수습모집 면접자 사전과제_이름.docx');
       document.body.appendChild(link);
       link.click();
     });
