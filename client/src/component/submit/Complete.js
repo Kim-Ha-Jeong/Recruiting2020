@@ -21,15 +21,19 @@ class Complete extends Component {
       this.setState({
         description: "잘못된 입력입니다!"
       })
+    } else if(window.location.hash === "#/result/undefine"){
+      this.setState({
+        description: "아직 결과가 공개되지 않았습니다!"
+      })
     }
   }
 
   selectIcon(){
     if(window.location.hash === "#/success"){
       return <Icon type="check-circle" style={{ fontSize: "100px" }} />
-    } else if(window.location.hash === "#/undefine"){
+    } else if(window.location.hash === "#/undefine" || window.location.hash === "#/result/undefine"){
       return <Icon type="close-circle" style={{ fontSize: "100px" }} />
-    }
+    } 
   }
 
   selectMove(){
