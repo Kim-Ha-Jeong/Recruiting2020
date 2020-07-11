@@ -49,7 +49,7 @@ class Design extends Component {
       </p>
     } else if (window.location.hash === "#/probationContent") {
       return <div id="content-wrapper">
-        <a href="http://ewhaianrecruiting.com/apiServer/download/이화이언 컨텐츠팀 37기 수습모집 면접자 사전과제_이름.docx">
+        <a href="http://ewhaianrecruiting.com/apiServer/download/이화이언 컨텐츠팀 38기 수습모집 면접자 사전과제_이름.docx">
           <Button id="download" shape="round" onClick={this.downloadHandler}>컨텐츠팀 사전과제 다운로드</Button>
         </a>
         <p id="probation-add">
@@ -123,7 +123,7 @@ class Design extends Component {
             </Form.Item>
             <div align="center" style={{marginTop: "3%"}}>
               <span className="add-ex">* 제출 시 파일 이름을 예시와 같이 작성해주세요<br />
-                예시) 37기 사전과제_디자인(팀명)_김화연(성명)<br/>
+                예시) 38기 사전과제_디자인(팀명)_김화연(성명)<br/>
                 * 사전과제 제출기한은 3월 28일 오전  12시(정오)까지 입니다.
               </span>
             </div>

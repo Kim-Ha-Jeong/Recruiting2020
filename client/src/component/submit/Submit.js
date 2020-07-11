@@ -159,7 +159,7 @@ class Submit extends React.Component {
             </Form.Item>
             <div align="center" style={{ marginTop: "3%" }}>
               <span className="add-ex">* 제출 시 파일 이름을 예시와 같이 작성해주세요<br />
-                예시) 37기 지원서_디자인(팀명)_김화연(성명)
+                예시) 38기 지원서_디자인(팀명)_김화연(성명)
             </span>
             </div>
             <Form.Item wrapperCol={{ span: 4, offset: 10 }}>
