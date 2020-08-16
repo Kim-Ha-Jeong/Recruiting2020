@@ -120,11 +120,9 @@ const contentListNoTitle = {
         <p className="card-title" id="e-title">운영진 활동후기</p>
         <hr id="card-line" />
         <div className="ewhaian-text" style={{ marginLeft: "3%",marginBottom: "3%" }} align="left" id="OB">
-          <span style={{ color: "#EC1468" }}>From. 32기 마스터 고승의</span><br /><br />
-          새내기 시절 패기로 지원했던<br className="forMobile" /> 수습운영진에 합격하여 <br className="forMobile" />마스터로 수료하기까지, <br className="forMobile"/>
-          2년 반의 활동이 끝나 운영진 후기를<br className="forMobile" /> 쓰니 감회가 새롭습니다.<br /> 세 번의 배꽃정원과
-          오월드림, <br className="forMobile" /> 생일파티와 크고 작은 부스부터 <br className="forMobile" />수많은 회의, 운영진들과 함께 울고 <br className="forMobile"/>
-          웃으며 행복했던 기억들이 스쳐 갑니다.
+          <span style={{ color: "#EC1468" }}>From. 34기 마스터 정은지</span><br /><br />
+          수습운영진부터 마스터까지 <br className="forMobile" />  2년의 활동을 끝마치고  <br className="forMobile" />운영진 활동 후기를 <br className="forMobile"/>
+          작성하려고 하니 <br className="forMobile" />감회가 새롭습니다.<br /> 
           <div className="forMobile" id="about-btn-wrapper" style={{ marginTop: "5%" }}>
             <Button shape="round" id="probation-content" className="probation-button">
               <a href="http://www.ewhaian.com/WebPage/Ewhaian/about_1.asp">OB 소감 자세히 보기</a>
@@ -132,16 +130,13 @@ const contentListNoTitle = {
           </div>
           <span className="forComputer">
             <br /><br />
-            이화이언 운영진으로 활동한 경험은 단연 제 대학생활 중 최고의 일이라고 말할 수 있습니다.<br />
-            단지 '멋있고 재밌어 보인다'는 작은 마음에서 시작된 운영진 활동은 그리 쉽지만은 않았습니다.<br />
-            시간이 지나며 점점 커지는 책임과 대표자의 무게가 가끔은 버겁게 느껴졌습니다.<br />
-            그럼에도 최고의 시간이라고 말할 수 있는 이유는 이화이언에서 너무도 멋진 사람들과 함께할 수 있었고,<br />
-            넘치는 경험을 통해 많은 것을 배웠고 변화할 수 있었기 때문입니다.<br /><br />
+            패기 넘치는 마음으로 지원하여 시작했던 운영진 활동은 어느덧 제 대학 생활의 큰 부분을 차지하게 되었습니다.<br />
+            제가 디자인한 작업이 현실화되는 순간의 성취감과 기쁨은 이루 말할 수 없었고, <br />
+            마케팅팀, 컨텐츠팀, 기술설계팀 운영진분들과 함께 행사를 기획하고 주최하는 일은 저의 시야를 더 넓힐 수 있도록 도와주었습니다. <br />
+            늘 순탄하지만은 않았지만, 운영진 활동을 통해 많은 것을 배울 수 있었습니다. <br /><br />
 
-            이화이언의 모토처럼 지난 시간 동안 '이화 안의 더 큰 만남' 을 함께 만들어주신
-            운영진 여러분, 회원 여러분들께 감사드립니다.<br />
-            내년이면 20주년을 맞는 이화이언이 앞으로 더 많은 날들을 만들어나가기를 바라며, 후배 운영진들에게 응원을 전합니다.<br />
-            이화를 사랑하는 사람들의 모임, 이화이언을 사랑해주시고 아껴주세요. 감사합니다.<br />
+            2년의 운영진 활동을 함께 했던 동기, 선후배 운영진분들에게 감사의 인사를 전합니다. <br />
+            그리고 앞으로 더 많은 날을 벗들과 함께할 수 있는 이화이언이 되기를 바랍니다.<br />
           </span>
         </div>
       </Card>
