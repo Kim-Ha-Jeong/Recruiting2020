@@ -43,7 +43,7 @@ class Design extends Component {
   selectProbation() {
     if (window.location.hash === "#/probationDesign") {
       return <p id="design-wrapper">사전과제에 대해 안내해 드리겠습니다.<br />
-        홈페이지 PC버전과 앱 메인에 들어갈 <br className="forMobile" /><span className="emphasize" style={{ color: "#EC1468", fontSize: "16px" }}>이화이언 봄 배너</span>를 만들어주세요.<br />
+        홈페이지 PC버전과 앱 메인에 들어갈 <br className="forMobile" /><span className="emphasize" style={{ color: "#EC1468", fontSize: "16px" }}>이화이언 겨울 배너</span>를 만들어주세요.<br />
         규격은 <span className="emphasize">580px*132px</span>으로, 저장은 <br className="forMobile" /><span className="emphasize">"웹용으로 제작-jpeg로 저장"</span>하면 됩니다.<br />
         <br />
       </p>
@@ -124,7 +124,7 @@ class Design extends Component {
             <div align="center" style={{marginTop: "3%"}}>
               <span className="add-ex">* 제출 시 파일 이름을 예시와 같이 작성해주세요<br />
                 예시) 38기 사전과제_디자인(팀명)_김화연(성명)<br/>
-                * 사전과제 제출기한은 9월 12일 오전  12시(정오)까지 입니다.
+                * 사전과제 제출기한은 9월 26일 오전  12시(정오)까지 입니다.
               </span>
             </div>
             <Form.Item wrapperCol={{ span: 4, offset: 10 }}>
